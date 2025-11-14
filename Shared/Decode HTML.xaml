@@ -1,0 +1,173 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Test" this:Test.HtmlText="&lt;p&gt;Eerste regel met bold en italic.&lt;br&gt;Tweede regel met een link en geel vlak.&lt;br&gt;Derde regel&lt;br&gt;met&amp;nbsp;&lt;br&gt;twee&amp;nbsp;&lt;br&gt;breaks&lt;br&gt;&amp;nbsp; &amp;nbsp;Vierde regel met inspringing &amp;gt; en kleiner dan &amp;lt; tekens&lt;br&gt;Emoji test 😎 &amp;amp; symbolen: &amp;copy;, &amp;euro;, &amp;copy;, &amp;euro;, &amp;trade;&lt;br&gt;Vijfde regel met underline en een losse &amp;lt;div&amp;gt; zonder sluiting&lt;br&gt;Zesde regel met geneste quotes: &amp;ldquo;tekst met &amp;lsquo;quotes&amp;rsquo; erin&amp;rdquo;&lt;br&gt;Spaties &amp;nbsp; &amp;nbsp;tussen &amp;nbsp; &amp;nbsp;woorden&lt;br&gt;Lijst:&lt;br&gt;Punt 1&lt;br&gt;Punt 2&lt;br&gt;met break&lt;br&gt;Punt 3 &amp;amp; extra&lt;/p&gt;" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="HtmlText" Type="InArgument(x:String)" />
+    <x:Property Name="CleanText" Type="OutArgument(x:String)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>924,457</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>Test_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.DataService.Activities</x:String>
+      <x:String>UiPath.DataService.Definition</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>Prepbot_Fijn_Design_Proces_C</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.Activities.System.Text</x:String>
+      <x:String>System.Text.RegularExpressions</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>netstandard</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.DataService.Activities.Core</AssemblyReference>
+      <AssemblyReference>UiPath.DataService.Definition</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Reflection.MetadataLoadContext</AssemblyReference>
+      <AssemblyReference>UiPath.Database.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>DataService.Prepbot_Fijn_Design_Proces_C</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>System.Linq.Async.Queryable</AssemblyReference>
+      <AssemblyReference>System.Linq.Parallel</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>System.Linq.Queryable</AssemblyReference>
+      <AssemblyReference>System.CodeDom</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
+      <AssemblyReference>System.Text.RegularExpressions</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Test" sap:VirtualizedContainerService.HintSize="416,390" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="354,57" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,276" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:InvokeCode ContinueOnError="{x:Null}" Code="htmlText = System.Net.WebUtility.HtmlDecode(htmlText)&#xA;&#xA;' Tel aantal &lt;br&gt;'s en vervang door net zoveel line breaks&#xA;Dim intermediate As String = Regex.Replace(htmlText, &quot;(&lt;br\s*/?&gt;)+&quot;, Function(m)&#xA;    Dim count = Regex.Matches(m.Value, &quot;&lt;br\s*/?&gt;&quot;, RegexOptions.IgnoreCase).Count&#xA;    Return String.Join(&quot;&quot;, Enumerable.Repeat(vbCrLf, count))&#xA;End Function, RegexOptions.IgnoreCase)&#xA;&#xA;' Zet &lt;/p&gt; om naar line break&#xA;intermediate = Regex.Replace(intermediate, &quot;&lt;/p\s*&gt;&quot;, vbCrLf, RegexOptions.IgnoreCase)&#xA;&#xA;' Verwijder alle overige HTML tags&#xA;cleanText = Regex.Replace(intermediate, &quot;&lt;[a-zA-Z\/][^&gt;]*?&gt;&quot;, &quot;&quot;).trim()&#xA;" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="354,188" sap2010:WorkflowViewState.IdRef="InvokeCode_1">
+            <ui:InvokeCode.Arguments>
+              <InArgument x:TypeArguments="x:String" x:Key="HtmlText">[HtmlText]</InArgument>
+              <OutArgument x:TypeArguments="x:String" x:Key="CleanText">[CleanText]</OutArgument>
+            </ui:InvokeCode.Arguments>
+          </ui:InvokeCode>
+        </Sequence>
+      </ui:CommentOut.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:CommentOut>
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="354,57" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,276" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:InvokeCode ContinueOnError="{x:Null}" Code="htmlText = System.Net.WebUtility.HtmlDecode(htmlText)&#xA;&#xA;' Tel aantal &lt;br&gt;'s en vervang door net zoveel line breaks&#xA;Dim intermediate As String = Regex.Replace(htmlText, &quot;(&lt;br\s*/?&gt;)+&quot;, Function(m)&#xA;    Dim count = Regex.Matches(m.Value, &quot;&lt;br\s*/?&gt;&quot;, RegexOptions.IgnoreCase).Count&#xA;    Return String.Join(&quot;&quot;, Enumerable.Repeat(vbCrLf, count))&#xA;End Function, RegexOptions.IgnoreCase)&#xA;&#xA;' Zet &lt;/p&gt; om naar line break&#xA;intermediate = Regex.Replace(intermediate, &quot;&lt;/p\s*&gt;&quot;, vbCrLf, RegexOptions.IgnoreCase)&#xA;&#xA;' Verwijder alle overige HTML tags&#xA;cleanText = Regex.Replace(intermediate, &quot;&lt;[a-zA-Z\/][^&gt;]*?&gt;&quot;, &quot;&quot;).Trim()&#xA;&#xA;' Vervang meerdere (eventueel gemixte) lege-regel-sequenties door één CRLF&#xA;cleanText = Regex.Replace(cleanText, &quot;(\r\n|\n|\r)\s*(\r\n|\n|\r)+&quot;, vbCrLf).Trim()" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="354,188" sap2010:WorkflowViewState.IdRef="InvokeCode_2">
+            <ui:InvokeCode.Arguments>
+              <InArgument x:TypeArguments="x:String" x:Key="HtmlText">[HtmlText]</InArgument>
+              <OutArgument x:TypeArguments="x:String" x:Key="CleanText">[CleanText]</OutArgument>
+            </ui:InvokeCode.Arguments>
+          </ui:InvokeCode>
+        </Sequence>
+      </ui:CommentOut.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:CommentOut>
+    <ui:InvokeCode ContinueOnError="{x:Null}" Code="' 0) Bescherm letterlijk bedoelde hoekhaken (&amp;lt; &amp;gt;) vóór decoden&#xD;&#xA;Dim protectedHtml As String = System.Text.RegularExpressions.Regex.Replace(htmlText, &quot;(?i)&amp;lt;&quot;, &quot;§LT§&quot;)&#xD;&#xA;protectedHtml = System.Text.RegularExpressions.Regex.Replace(protectedHtml, &quot;(?i)&amp;gt;&quot;, &quot;§GT§&quot;)&#xD;&#xA;&#xD;&#xA;' 1) Decode HTML entities (blijft van §LT§/§GT§ af)&#xD;&#xA;protectedHtml = System.Net.WebUtility.HtmlDecode(protectedHtml)&#xD;&#xA;&#xD;&#xA;' 2) Normaliseer line-endings naar LF (intern werken op LF)&#xD;&#xA;Dim s As String = protectedHtml.Replace(vbCrLf, vbLf).Replace(vbCr, vbLf)&#xD;&#xA;&#xD;&#xA;' 3) Tel &lt;br&gt;'s en vervang door net zoveel line breaks (LF)&#xD;&#xA;Dim intermediate As String = System.Text.RegularExpressions.Regex.Replace(&#xD;&#xA;    s,&#xD;&#xA;    &quot;(?i)(&lt;br\s*/?&gt;)+&quot;,&#xD;&#xA;    Function(m As System.Text.RegularExpressions.Match)&#xD;&#xA;        Dim count As Integer = System.Text.RegularExpressions.Regex.Matches(m.Value, &quot;(?i)&lt;br\s*/?&gt;&quot;).Count&#xD;&#xA;        Return New String(vbLf(0), count)&#xD;&#xA;    End Function&#xD;&#xA;)&#xD;&#xA;&#xD;&#xA;' 4) Zet &lt;/p&gt; om naar line break (zoals jouw oorspronkelijke gedrag)&#xD;&#xA;intermediate = System.Text.RegularExpressions.Regex.Replace(intermediate, &quot;(?i)&lt;/p\s*&gt;&quot;, vbLf)&#xD;&#xA;&#xD;&#xA;' 5) Verwijder alle overige HTML tags (maar §LT§/§GT§ zijn geen &lt;...&gt;, dus blijven staan)&#xD;&#xA;Dim stripped As String = System.Text.RegularExpressions.Regex.Replace(intermediate, &quot;&lt;[a-zA-Z\/][^&gt;]*?&gt;&quot;, &quot;&quot;)&#xD;&#xA;&#xD;&#xA;' 6) NBSP (U+00A0) naar gewone spatie&#xD;&#xA;stripped = stripped.Replace(ChrW(&amp;HA0), &quot; &quot;)&#xD;&#xA;&#xD;&#xA;' 7) Herstel letterlijk bedoelde hoekhaken&#xD;&#xA;stripped = stripped.Replace(&quot;§LT§&quot;, &quot;&lt;&quot;).Replace(&quot;§GT§&quot;, &quot;&gt;&quot;)&#xD;&#xA;&#xD;&#xA;' 8) Zet LF -&gt; CRLF voor Windows/UiPath&#xD;&#xA;cleanText = stripped.Replace(vbLf, vbCrLf)&#xD;&#xA;&#xD;&#xA;' Geen Trim() en geen collapsen van lege regels" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="354,188" sap2010:WorkflowViewState.IdRef="InvokeCode_3">
+      <ui:InvokeCode.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="HtmlText">[HtmlText]</InArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="CleanText">[CleanText]</OutArgument>
+      </ui:InvokeCode.Arguments>
+    </ui:InvokeCode>
+  </Sequence>
+</Activity>
