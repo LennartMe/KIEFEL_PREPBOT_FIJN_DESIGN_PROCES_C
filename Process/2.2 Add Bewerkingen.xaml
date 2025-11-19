@@ -108,19 +108,19 @@
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="_2_2_Add_Bewerkingen" sap:VirtualizedContainerService.HintSize="637,1645" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="_2_2_Add_Bewerkingen" sap:VirtualizedContainerService.HintSize="1007.3333333333333,1586" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_BewerkingenToAdd]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="575,1557" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
+    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_BewerkingenToAdd]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="513.3333333333334,1563.3333333333333" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
       <ui:ForEachRow.Body>
         <ActivityAction x:TypeArguments="sd:DataRow">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="541,1370" sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="511.3333333333333,1388.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_4">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="LineNr" />
               <Variable x:TypeArguments="x:String" Name="MachGrpCode" />
@@ -131,15 +131,16 @@
               <Variable x:TypeArguments="x:String" Name="MemoText" />
               <Variable x:TypeArguments="sd:DataTable" Name="dt_result" />
               <Variable x:TypeArguments="x:Boolean" Name="Tussenvoegen" />
+              <Variable x:TypeArguments="x:String" Name="UrenType" />
             </Sequence.Variables>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="479,334" sap2010:WorkflowViewState.IdRef="MultipleAssign_4">
+            <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="477.3333333333333,364" sap2010:WorkflowViewState.IdRef="MultipleAssign_4">
               <ui:MultipleAssign.AssignOperations>
-                <scg:List x:TypeArguments="ui:AssignOperation" Capacity="8">
+                <scg:List x:TypeArguments="ui:AssignOperation" Capacity="16">
                   <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_24">
                     <ui:AssignOperation.To>
                       <OutArgument x:TypeArguments="x:String">[LineNr]</OutArgument>
@@ -172,6 +173,14 @@
                       <InArgument x:TypeArguments="x:String">[CurrentRow("Qty").tostring]</InArgument>
                     </ui:AssignOperation.Value>
                   </ui:AssignOperation>
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_31">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:String">[UrenType]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:String">[If(CurrentRow("UrenType").ToString().trim = "MachineUren", "1", If(CurrentRow("UrenType").ToString().trim = "ManUren", "2", "NULL"))]</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
                   <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_28">
                     <ui:AssignOperation.To>
                       <OutArgument x:TypeArguments="x:String">[MachineUren]</OutArgument>
@@ -199,24 +208,24 @@
                 </scg:List>
               </ui:MultipleAssign.AssignOperations>
             </ui:MultipleAssign>
-            <ui:ExecuteQuery ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" DataTable="[dt_result]" DisplayName="Create Bewerking Row" ExistingDbConnection="[DatabaseConnection]" sap:VirtualizedContainerService.HintSize="479,146" sap2010:WorkflowViewState.IdRef="ExecuteQuery_4" Sql="[CreateBewerkingRowofPD.replace(&quot;{ProdHeaderDossierCode}&quot;,ProdHeaderDossierCode).replace(&quot;{LineNr}&quot;,LineNr).replace(&quot;{MachGrpCode}&quot;,MachGrpCode)]">
+            <ui:ExecuteQuery ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" DataTable="[dt_result]" DisplayName="Create Bewerking Row" ExistingDbConnection="[DatabaseConnection]" sap:VirtualizedContainerService.HintSize="477.3333333333333,148" sap2010:WorkflowViewState.IdRef="ExecuteQuery_4" Sql="[CreateBewerkingRowofPD.replace(&quot;{ProdHeaderDossierCode}&quot;,ProdHeaderDossierCode).replace(&quot;{LineNr}&quot;,LineNr).replace(&quot;{MachGrpCode}&quot;,MachGrpCode)]">
               <ui:ExecuteQuery.Parameters>
                 <scg:Dictionary x:TypeArguments="x:String, Argument" />
               </ui:ExecuteQuery.Parameters>
             </ui:ExecuteQuery>
-            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="479,173" sap2010:WorkflowViewState.IdRef="LogMessage_6" Message="[dt_result.rows(0)(&quot;Message&quot;).tostring]" />
-            <ui:ExecuteQuery ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" DataTable="[dt_result]" DisplayName="Update Bewerking Row" ExistingDbConnection="[DatabaseConnection]" sap:VirtualizedContainerService.HintSize="479,146" sap2010:WorkflowViewState.IdRef="ExecuteQuery_5" Sql="[UpdateBewerkingRowofPD.replace(&quot;{ProdHeaderDossierCode}&quot;,ProdHeaderDossierCode).replace(&quot;{LineNr}&quot;,LineNr).replace(&quot;{MachGrpCode}&quot;,MachGrpCode).replace(&quot;{ProdBOOPartDescription}&quot;,ProdBOOPartDescription).replace(&quot;{Quantity}&quot;,Quantity).replace(&quot;{MachineUren}&quot;,MachineUren).replace(&quot;{ManUren}&quot;,ManUren)]">
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="477.3333333333333,176.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_6" Message="[dt_result.rows(0)(&quot;Message&quot;).tostring]" />
+            <ui:ExecuteQuery ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" DataTable="[dt_result]" DisplayName="Update Bewerking Row" ExistingDbConnection="[DatabaseConnection]" sap:VirtualizedContainerService.HintSize="477.3333333333333,148" sap2010:WorkflowViewState.IdRef="ExecuteQuery_5" Sql="[UpdateBewerkingRowofPD.replace(&quot;{ProdHeaderDossierCode}&quot;,ProdHeaderDossierCode).replace(&quot;{LineNr}&quot;,LineNr).replace(&quot;{MachGrpCode}&quot;,MachGrpCode).replace(&quot;{ProdBOOPartDescription}&quot;,ProdBOOPartDescription).replace(&quot;{Quantity}&quot;,Quantity).replace(&quot;{UrenType}&quot;,UrenType).replace(&quot;{MachineUren}&quot;,MachineUren).replace(&quot;{ManUren}&quot;,ManUren)]">
               <ui:ExecuteQuery.Parameters>
                 <scg:Dictionary x:TypeArguments="x:String, Argument" />
               </ui:ExecuteQuery.Parameters>
             </ui:ExecuteQuery>
-            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="479,173" sap2010:WorkflowViewState.IdRef="LogMessage_7" Message="[dt_result.rows(0)(&quot;Message&quot;).tostring]" />
-            <ui:ExecuteQuery ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" DataTable="[dt_result]" DisplayName="Update Bewerking Memo " ExistingDbConnection="[DatabaseConnection]" sap:VirtualizedContainerService.HintSize="479,146" sap2010:WorkflowViewState.IdRef="ExecuteQuery_6" Sql="[UpdateMemoOfBewerkingRowOfPD.replace(&quot;{ProdHeaderDossierCode}&quot;,ProdHeaderDossierCode).replace(&quot;{LineNr}&quot;,LineNr).replace(&quot;{MemoText}&quot;,MemoText)]">
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="477.3333333333333,176.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_7" Message="[dt_result.rows(0)(&quot;Message&quot;).tostring]" />
+            <ui:ExecuteQuery ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" DataTable="[dt_result]" DisplayName="Update Bewerking Memo " ExistingDbConnection="[DatabaseConnection]" sap:VirtualizedContainerService.HintSize="477.3333333333333,148" sap2010:WorkflowViewState.IdRef="ExecuteQuery_6" Sql="[UpdateMemoOfBewerkingRowOfPD.replace(&quot;{ProdHeaderDossierCode}&quot;,ProdHeaderDossierCode).replace(&quot;{LineNr}&quot;,LineNr).replace(&quot;{MemoText}&quot;,MemoText)]">
               <ui:ExecuteQuery.Parameters>
                 <scg:Dictionary x:TypeArguments="x:String, Argument" />
               </ui:ExecuteQuery.Parameters>
             </ui:ExecuteQuery>
-            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="479,164" sap2010:WorkflowViewState.IdRef="LogMessage_8" Message="[dt_result.rows(0)(&quot;Message&quot;).tostring]" />
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="477.3333333333333,167.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_8" Message="[dt_result.rows(0)(&quot;Message&quot;).tostring]" />
           </Sequence>
         </ActivityAction>
       </ui:ForEachRow.Body>

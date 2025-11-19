@@ -108,25 +108,25 @@
       <AssemblyReference>System.Linq.Expressions</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="_6_2_Print_voorblad" sap:VirtualizedContainerService.HintSize="512,2593" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="_6_2_Print_voorblad" sap:VirtualizedContainerService.HintSize="1007.3333333333333,2586" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: Isah - Hoofdmenu - TestProduktieDB" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="450,2505" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" IsDisplayNameAuto="True" ScopeGuid="4b53739b-0c73-40c3-862f-665e05b42f0d" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: Isah - Hoofdmenu - TestProduktieDB" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="484,2563.3333333333335" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" IsDisplayNameAuto="True" ScopeGuid="4b53739b-0c73-40c3-862f-665e05b42f0d" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,2215" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,2229.3333333333335" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Engineering'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="354,225" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4b53739b-0c73-40c3-862f-665e05b42f0d" Version="V4">
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Engineering'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,229.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4b53739b-0c73-40c3-862f-665e05b42f0d" Version="V4">
               <uix:NClick.Target>
                 <uix:TargetAnchorable CVScreenId="ca7ad98b-d815-4ce1-b4c7-cad54c758121" CvElementArea="14, 725, 200, 26" CvTextArea="36, 730, 68, 15" CvTextArgument="Engineering" CvType="Button" DesignTimeRectangle="13, 725, 199, 24" ElementType="Text" FullSelectorArgument="&lt;wnd cls='TTabSheet' title='Modern' /&gt;&lt;ctrl name='Navigation' role='pane' /&gt;&lt;ctrl name='Engineering' role='text' /&gt;" Guid="9893e7b9-25eb-4ca4-a721-08b3ce2ff25f" InformativeScreenshot="85edbc85fafbe63158ecfbe9bbe3053c.png" ScopeSelectorArgument="&lt;wnd app='isah7.exe' cls='TfrmMainMenu' title='Isah - Hoofdmenu - TestProduktieDB' /&gt;" SearchSteps="Selector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="None" />
               </uix:NClick.Target>
@@ -141,11 +141,11 @@
                 </uix:VerifyExecutionOptions>
               </uix:NClick.VerifyOptions>
             </uix:NClick>
-            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Artikelen'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="354,225" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4b53739b-0c73-40c3-862f-665e05b42f0d" Version="V4">
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Artikelen'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,229.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4b53739b-0c73-40c3-862f-665e05b42f0d" Version="V4">
               <uix:NClick.Target>
                 <uix:TargetAnchorable DesignTimeRectangle="54, 363, 97, 18" FullSelectorArgument="&lt;wnd cls='TTabSheet' title='Modern' /&gt;&lt;wnd cls='TIsah7ActionMenu' idx='8' /&gt;&lt;ctrl name='Productiedossiers' role='outline item' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TTabSheet' title='Modern' matching:title='fuzzy' fuzzylevel:title='0.0' /&gt;&lt;wnd cls='TIsah7ActionMenu' /&gt;&lt;ctrl name='Productiedossiers' role='outline item' automationid='' matching:name='fuzzy' fuzzylevel:name='0.0' matching:automationid='fuzzy' fuzzylevel:automationid='0.0' check:text='Productiedossiers' /&gt;" Guid="6661f273-a828-41b2-a484-7e86d816ce9c" ImageBase64="" InformativeScreenshot="48a61523257c84592354c2113d568771.png" ScopeSelectorArgument="&lt;wnd app='isah7.exe' cls='TfrmMainMenu' title='Isah - Hoofdmenu - TestProduktieDB' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V6" Visibility="Interactive" WaitForReadyArgument="None">
                   <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                       <uix:Target DesignTimeRectangle="54, 327, 51, 18" FullSelectorArgument="&lt;wnd cls='TTabSheet' title='Modern' /&gt;&lt;wnd cls='TIsah7ActionMenu' idx='8' /&gt;&lt;ctrl name='Artikelen' role='outline item' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TTabSheet' title='Modern' matching:title='fuzzy' fuzzylevel:title='0.0' /&gt;&lt;wnd cls='TIsah7ActionMenu' /&gt;&lt;ctrl name='Artikelen' role='outline item' automationid='' matching:name='fuzzy' fuzzylevel:name='0.0' matching:automationid='fuzzy' fuzzylevel:automationid='0.0' check:text='Artikelen' /&gt;" Guid="9863d356-b95e-4b1d-9f82-1b54e3b5e245" ImageBase64="" SearchSteps="Selector, FuzzySelector" />
                     </scg:List>
                   </uix:TargetAnchorable.Anchors>
@@ -162,7 +162,7 @@
                 </uix:VerifyExecutionOptions>
               </uix:NClick.VerifyOptions>
             </uix:NClick>
-            <uix:NCheckState DisplayName="Check App State 'Isah - 0092 Productiedo…'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="354,57" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="4b53739b-0c73-40c3-862f-665e05b42f0d" Timeout="20" Version="V4">
+            <uix:NCheckState DisplayName="Check App State 'Isah - 0092 Productiedo…'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="416,57.333333333333336" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="4b53739b-0c73-40c3-862f-665e05b42f0d" Timeout="20" Version="V4">
               <uix:NCheckState.IfExists>
                 <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,105" sap2010:WorkflowViewState.IdRef="Sequence_3">
                   <sap:WorkflowViewStateService.ViewState>
@@ -212,7 +212,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uix:NCheckState>
-            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Lopende productiedossie…'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="354,225" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4b53739b-0c73-40c3-862f-665e05b42f0d" Version="V4">
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Lopende productiedossie…'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,229.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4b53739b-0c73-40c3-862f-665e05b42f0d" Version="V4">
               <uix:NClick.Target>
                 <uix:TargetAnchorable DesignTimeRectangle="769, 133, 233, 23" FullSelectorArgument="&lt;wnd cls='TIsahContextComboBox' /&gt;" FuzzyAccuracy="1" FuzzySelectorArgument="&lt;wnd cls='TIsahContextComboBox' /&gt;" Guid="b6119f8c-bad6-490c-9f86-f883d515d904" ImageBase64="" InformativeScreenshot="21c75bf7b0ffaf21566e57ffc7c8c4d2.png" ScopeSelectorArgument="&lt;wnd app='isah7.exe' cls='TFRM*' title='Isah - 0092 Productiedossiers - *' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V6" Visibility="Interactive" WaitForReadyArgument="None" />
               </uix:NClick.Target>
@@ -227,21 +227,21 @@
                 </uix:VerifyExecutionOptions>
               </uix:NClick.VerifyOptions>
             </uix:NClick>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" ClipboardMode="Never" DisplayName="Type Into" EmptyFieldMode="None" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="354,257" sap2010:WorkflowViewState.IdRef="NTypeInto_1" Text="L" Version="V4" />
-            <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="354,211" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_1" Shortcuts="[d(hk)][k(enter)][u(hk)]" Version="V4" />
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into 'TIsahSearchEdit'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="354,250" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="4b53739b-0c73-40c3-862f-665e05b42f0d" Text="[ProdHeaderDossierCode]" Version="V4">
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" ClipboardMode="Never" DisplayName="Type Into" EmptyFieldMode="None" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,264.6666666666667" sap2010:WorkflowViewState.IdRef="NTypeInto_1" Text="L" Version="V4" />
+            <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,215.33333333333334" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_1" Shortcuts="[d(hk)][k(enter)][u(hk)]" Version="V4" />
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into 'TIsahSearchEdit'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,254.66666666666666" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="4b53739b-0c73-40c3-862f-665e05b42f0d" Text="[ProdHeaderDossierCode]" Version="V4">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable DesignTimeRectangle="360, 133, 90, 23" FullSelectorArgument="&lt;wnd cls='TIsahSearchEdit' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TIsahSearchEdit' /&gt;" Guid="76585727-c5e6-463d-b61d-7acaf6aa930e" ImageBase64="" InformativeScreenshot="9a2bd1627da2b8da29c039b9ee0bc0ac.png" ScopeSelectorArgument="&lt;wnd app='isah7.exe' cls='TFRM*' title='Isah - 0092 Productiedossiers - TestProduktieDB (S)' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V6" Visibility="Interactive" WaitForReadyArgument="None">
                   <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                       <uix:Target DesignTimeRectangle="174, 133, 180, 23" ElementType="DropDown" FullSelectorArgument="&lt;wnd cls='TIsahComboBox' idx='2' /&gt;" Guid="c4794e96-81d4-4bcd-acac-14823fde2588" SearchSteps="Selector" />
                     </scg:List>
                   </uix:TargetAnchorable.Anchors>
                 </uix:TargetAnchorable>
               </uix:NTypeInto.Target>
             </uix:NTypeInto>
-            <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="354,211" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_2" Shortcuts="[d(hk)][d(shift)][k(f9)][u(shift)][u(hk)]" Version="V4" />
-            <uix:NCheckState DisplayName="Check App State 'Isah - Rapport CA002 Pr…'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="354,57" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="4b53739b-0c73-40c3-862f-665e05b42f0d" Timeout="10" Version="V4">
+            <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,215.33333333333334" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_2" Shortcuts="[d(hk)][d(shift)][k(f9)][u(shift)][u(hk)]" Version="V4" />
+            <uix:NCheckState DisplayName="Check App State 'Isah - Rapport CA002 Pr…'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="416,57.333333333333336" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="4b53739b-0c73-40c3-862f-665e05b42f0d" Timeout="10" Version="V4">
               <uix:NCheckState.IfExists>
                 <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,105" sap2010:WorkflowViewState.IdRef="Sequence_5">
                   <sap:WorkflowViewStateService.ViewState>
@@ -270,7 +270,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uix:NCheckState>
-            <uix:NSelectItem DisplayName="Select Item 'Afdrukvoorbeeld'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="354,189" sap2010:WorkflowViewState.IdRef="NSelectItem_1" Item="Printer Verkoop" ScopeIdentifier="4b53739b-0c73-40c3-862f-665e05b42f0d" Version="V4">
+            <uix:NSelectItem DisplayName="Select Item 'Afdrukvoorbeeld'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,191.33333333333334" sap2010:WorkflowViewState.IdRef="NSelectItem_1" Item="Afdrukvoorbeeld" ScopeIdentifier="4b53739b-0c73-40c3-862f-665e05b42f0d" Version="V4">
               <uix:NSelectItem.Items>
                 <scg:List x:TypeArguments="x:String" Capacity="4">
                   <x:String>Afdrukvoorbeeld</x:String>
@@ -283,7 +283,7 @@
                 <uix:TargetAnchorable DesignTimeRectangle="397, 163, 235, 23" ElementType="DropDown" FullSelectorArgument="&lt;wnd cls='TTabSheet' title='Algemeen' /&gt;&lt;wnd cls='TComboBox' idx='2' /&gt;&lt;ctrl role='combo box' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TTabSheet' title='Algemeen' matching:title='fuzzy' fuzzylevel:title='0.0' /&gt;&lt;wnd cls='TComboBox' /&gt;&lt;ctrl role='combo box' automationid='' matching:automationid='fuzzy' fuzzylevel:automationid='0.0' /&gt;" Guid="d5b34f11-dd57-4b48-b4b8-66c32ef816c5" ImageBase64="" InformativeScreenshot="56dee681bcff0ab299e25a7ada9c26ee.png" ScopeSelectorArgument="&lt;wnd app='isah7.exe' cls='TFRM*' title='Isah - Rapport CA002 Productieblad - TestProduktieDB' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V6" Visibility="Interactive" WaitForReadyArgument="None" />
               </uix:NSelectItem.Target>
             </uix:NSelectItem>
-            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'OK'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="354,218" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4b53739b-0c73-40c3-862f-665e05b42f0d" Version="V4">
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'OK'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,222.66666666666666" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4b53739b-0c73-40c3-862f-665e05b42f0d" Version="V4">
               <uix:NClick.Target>
                 <uix:TargetAnchorable DesignTimeRectangle="729, 582, 75, 25" ElementType="Button" FullSelectorArgument="&lt;wnd cls='TButton' title='OK' /&gt;" Guid="91f91e6f-49c6-4efa-8ded-1bc04cc676dd" InformativeScreenshot="5df7e9d7519d541c4ae7050400cd8bbe.png" ScopeSelectorArgument="&lt;wnd app='isah7.exe' cls='TFRM*' title='Isah - Rapport CA002 Productieblad - TestProduktieDB' /&gt;" SearchSteps="Selector" Version="V6" Visibility="Interactive" WaitForReadyArgument="None" />
               </uix:NClick.Target>

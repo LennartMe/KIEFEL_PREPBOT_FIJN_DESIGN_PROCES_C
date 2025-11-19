@@ -2,8 +2,7 @@ DECLARE @ProdHeaderDossierCode varchar(255)
 SET @ProdHeaderDossierCode = '{Prodheaderdossiercode}';
 
 SELECT DISTINCT
---Case when Previous_LineNr IS NOT NULL and Next_LineNr IS NOT NULL Then 'True' ELSE 'False' end as [Tussenvoegen],
-LineNr, Next_LineNr,Next_LineNr2,MachGrpCode,ProdBOOPartDescription,Qty,MachineUren,Manuren,[Memo]
+LineNr, Next_LineNr,Next_LineNr2,MachGrpCode,ProdBOOPartDescription,Qty,UrenType,MachineUren,Manuren,[Memo]
 FROM (
 
 
@@ -18,6 +17,7 @@ SELECT
 	pboo.MachGrpCode, 
 	pboo.ProdBOOPartDescription, 
 	pboo.Qty, 
+	CASE WHEN pboo.PlanningBasedOnType = 1 THEN 'MachineUren' WHEN pboo.PlanningBasedOnType = 2 THEN 'ManUren' ELSE '' END AS [UrenType],
 	FORMAT(CAST((pboo.MachCycleTime/3600) as decimal(10,3)), 'N2', 'nl-NL') [MachineUren], 
 	FORMAT(CAST((pboo.OccupationCycleTime/3600) as decimal(10,3)), 'N2', 'nl-NL') [Manuren],
 	pboo.info [Memo]

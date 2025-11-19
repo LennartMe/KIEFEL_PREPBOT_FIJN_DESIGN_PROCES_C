@@ -4,10 +4,11 @@ BEGIN TRANSACTION;
 DECLARE @ProdHeaderDossierCode NVARCHAR(50) = N'{ProdHeaderDossierCode}';
 DECLARE @LineNr INT = {LineNr};
 DECLARE @MachGrpCode NVARCHAR(50) = N'{MachGrpCode}';
-DECLARE @ProdBOOPartDescription NVARCHAR(50) = N'{ProdBOOPartDescription}'
-DECLARE @Quantity NVARCHAR(50) = N'{Quantity}'
-DECLARE @MachineUren NVARCHAR(50) = N'{MachineUren}'
-DECLARE @ManUren NVARCHAR(50) = N'{ManUren}'
+DECLARE @ProdBOOPartDescription NVARCHAR(50) = N'{ProdBOOPartDescription}';
+DECLARE @Quantity NVARCHAR(50) = N'{Quantity}';
+DECLARE @UrenType tinyint = {UrenType};
+DECLARE @MachineUren NVARCHAR(50) = N'{MachineUren}';
+DECLARE @ManUren NVARCHAR(50) = N'{ManUren}';
 DECLARE @ProdBOOLineNr INT;
 
 -- Variabelen
@@ -73,7 +74,7 @@ BEGIN TRY
         @IsahUserCode = N'RPA',
         @LogProgramCode = 950000,
         @SchedulingFactor = NULL,
-        @PlanningBasedOnType = NULL,
+        @PlanningBasedOnType = @UrenType,
         @PlanningType = NULL,
         @PlanningInOneTimeSlotInd = NULL,
         @PlanningConstraintType = NULL,

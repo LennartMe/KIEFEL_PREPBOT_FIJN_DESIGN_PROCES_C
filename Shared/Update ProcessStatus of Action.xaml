@@ -104,15 +104,15 @@
       <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Update ProcessStatus of Action" sap:VirtualizedContainerService.HintSize="416,335" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Update ProcessStatus of Action" sap:VirtualizedContainerService.HintSize="899.3333333333333,856.3233333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uda:UpdateEntityRecord x:TypeArguments="p:PDSuggestion" InputEntity="{x:Null}" IsInRecordView="{x:Null}" OutputEntity="{x:Null}" VisibleDynamicPropertiesInfo="{x:Null}" ContinueOnError="False" DisplayName="Update Entity Record" EntityId="f30bfdf3-812a-f011-8b3d-002248997c1b" ExpansionDepth="2" sap:VirtualizedContainerService.HintSize="354,247" sap2010:WorkflowViewState.IdRef="UpdateEntityRecord`1_1" InputEntityInFieldView="[new Prepbot_Fijn_Design_Proces_C.PDSuggestion() With {  .ProcessStatus = ProcessStatus, .Id = RecordID }]" RecordId="[RecordID]" TimeoutInMs="30000">
+    <uda:UpdateEntityRecord x:TypeArguments="p:PDSuggestion" InputEntity="{x:Null}" IsInRecordView="{x:Null}" OutputEntity="{x:Null}" VisibleDynamicPropertiesInfo="{x:Null}" ContinueOnError="False" DisplayName="Update Entity Record" EntityId="f30bfdf3-812a-f011-8b3d-002248997c1b" ExpansionDepth="2" sap:VirtualizedContainerService.HintSize="450,250.66666666666666" sap2010:WorkflowViewState.IdRef="UpdateEntityRecord`1_1" InputEntityInFieldView="[new Prepbot_Fijn_Design_Proces_C.PDSuggestion() With {  .ProcessStatus = ProcessStatus, .Id = RecordID }]" RecordId="[RecordID]" TimeoutInMs="30000">
       <uda:UpdateEntityRecord.State>
-        <udam:RecordState RequiredFieldCount="1">
+        <udam:RecordState RequiredFieldCount="2">
           <udam:RecordState.SelectedFields>
             <scg:List x:TypeArguments="udam:DynamicEntityField" Capacity="1">
               <udam:DynamicEntityField Id="389b9853-9842-f011-a5f1-0022489e662b" Name="ProcessStatus">

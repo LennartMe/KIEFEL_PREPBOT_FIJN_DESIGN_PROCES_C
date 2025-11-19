@@ -122,7 +122,7 @@
       <AssemblyReference>System.Text.RegularExpressions</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="_5__Check_and_perfrom_Bewerking_changes_if_needed" sap:VirtualizedContainerService.HintSize="750,4210" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="_5__Check_and_perfrom_Bewerking_changes_if_needed" sap:VirtualizedContainerService.HintSize="1007.3333333333333,4360.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Int32" Name="rownumber" />
       <Variable x:TypeArguments="sd:DataTable" Name="dt_BewerkingenOfPD_FromApp" />
@@ -138,7 +138,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Establish Database connection - Invoke Workflow File (Shared\Establish Database connection.xaml)" sap:VirtualizedContainerService.HintSize="688,57" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Shared\Establish Database connection.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Establish Database connection - Invoke Workflow File (Shared\Establish Database connection.xaml)" sap:VirtualizedContainerService.HintSize="579.3333333333334,57.333333333333336" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Shared\Establish Database connection.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <OutArgument x:TypeArguments="ui:DatabaseConnection" x:Key="DatabaseConnection">[DatabaseConnection]</OutArgument>
       </ui:InvokeWorkflowFile.Arguments>
@@ -149,23 +149,23 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:InvokeWorkflowFile>
-    <Sequence DisplayName="Store Bewerkingen from query in dt" sap:VirtualizedContainerService.HintSize="688,634" sap2010:WorkflowViewState.IdRef="Sequence_4">
+    <Sequence DisplayName="Store Bewerkingen from query in dt" sap:VirtualizedContainerService.HintSize="579.3333333333334,613.3333333333334" sap2010:WorkflowViewState.IdRef="Sequence_4">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:BuildDataTable DataTable="[dt_BewerkingenOfPD_FromQuery]" DisplayName="Build dt_BewerkingenOfPD_FromQuery" sap:VirtualizedContainerService.HintSize="388,92" sap2010:WorkflowViewState.IdRef="BuildDataTable_2" TableInfo="&lt;NewDataSet&gt;&#xD;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xD;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xD;&#xA;      &lt;xs:complexType&gt;&#xD;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xD;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xD;&#xA;            &lt;xs:complexType&gt;&#xD;&#xA;              &lt;xs:sequence&gt;&#xD;&#xA;                &lt;xs:element name=&quot;LineNr&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Next_LineNr&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Next_LineNr2&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;MachGrpCode&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;ProdBOOPartDescription&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Qty&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;MachineUren&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;ManUren&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Memo&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;              &lt;/xs:sequence&gt;&#xD;&#xA;            &lt;/xs:complexType&gt;&#xD;&#xA;          &lt;/xs:element&gt;&#xD;&#xA;        &lt;/xs:choice&gt;&#xD;&#xA;      &lt;/xs:complexType&gt;&#xD;&#xA;    &lt;/xs:element&gt;&#xD;&#xA;  &lt;/xs:schema&gt;&#xD;&#xA;&lt;/NewDataSet&gt;" />
-      <ui:ExecuteQuery ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" DataTable="[dt_BewerkingenOfPD_FromQuery]" DisplayName="Run Query" ExistingDbConnection="[DatabaseConnection]" sap:VirtualizedContainerService.HintSize="388,146" sap2010:WorkflowViewState.IdRef="ExecuteQuery_1" Sql="[GetAllBewerkingRowsOfPDQuery.replace(&quot;{Prodheaderdossiercode}&quot;,ProdHeaderDossierCode)]">
+      <ui:BuildDataTable DataTable="[dt_BewerkingenOfPD_FromQuery]" DisplayName="Build dt_BewerkingenOfPD_FromQuery" sap:VirtualizedContainerService.HintSize="416,92" sap2010:WorkflowViewState.IdRef="BuildDataTable_2" TableInfo="&lt;NewDataSet&gt;&#xD;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xD;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xD;&#xA;      &lt;xs:complexType&gt;&#xD;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xD;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xD;&#xA;            &lt;xs:complexType&gt;&#xD;&#xA;              &lt;xs:sequence&gt;&#xD;&#xA;                &lt;xs:element name=&quot;LineNr&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Next_LineNr&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Next_LineNr2&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;MachGrpCode&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;ProdBOOPartDescription&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Qty&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;UrenType&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;MachineUren&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;ManUren&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Memo&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;              &lt;/xs:sequence&gt;&#xD;&#xA;            &lt;/xs:complexType&gt;&#xD;&#xA;          &lt;/xs:element&gt;&#xD;&#xA;        &lt;/xs:choice&gt;&#xD;&#xA;      &lt;/xs:complexType&gt;&#xD;&#xA;    &lt;/xs:element&gt;&#xD;&#xA;  &lt;/xs:schema&gt;&#xD;&#xA;&lt;/NewDataSet&gt;" />
+      <ui:ExecuteQuery ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" DataTable="[dt_BewerkingenOfPD_FromQuery]" DisplayName="Run Query" ExistingDbConnection="[DatabaseConnection]" sap:VirtualizedContainerService.HintSize="416,148" sap2010:WorkflowViewState.IdRef="ExecuteQuery_1" Sql="[GetAllBewerkingRowsOfPDQuery.replace(&quot;{Prodheaderdossiercode}&quot;,ProdHeaderDossierCode)]">
         <ui:ExecuteQuery.Parameters>
           <scg:Dictionary x:TypeArguments="x:String, Argument" />
         </ui:ExecuteQuery.Parameters>
       </ui:ExecuteQuery>
-      <ui:OutputDataTable DataTable="[dt_BewerkingenOfPD_FromQuery]" DisplayName="Output Data Table as Text" sap:VirtualizedContainerService.HintSize="388,112" sap2010:WorkflowViewState.IdRef="OutputDataTable_2" Text="[str_dt_BewerkingenOfPD_FromQuery]" />
-      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="388,164" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[str_dt_BewerkingenOfPD_FromQuery]" />
+      <ui:OutputDataTable DataTable="[dt_BewerkingenOfPD_FromQuery]" DisplayName="Output Data Table as Text" sap:VirtualizedContainerService.HintSize="416,114" sap2010:WorkflowViewState.IdRef="OutputDataTable_2" Text="[str_dt_BewerkingenOfPD_FromQuery]" />
+      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,167.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[str_dt_BewerkingenOfPD_FromQuery]" />
     </Sequence>
-    <Sequence DisplayName="Store Bewerkingen from app in dt" sap:VirtualizedContainerService.HintSize="688,2279" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence DisplayName="Store Bewerkingen from app in dt" sap:VirtualizedContainerService.HintSize="579.3333333333334,2354.6666666666665" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:String" Name="str_dt_BewerkingenOfPD_FromApp" />
         <Variable x:TypeArguments="sd:DataTable" Name="dt_joinedApp" />
@@ -179,8 +179,8 @@
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:BuildDataTable DataTable="[dt_BewerkingenOfPD_FromApp]" DisplayName="Build dt_BewerkingenOfPD_FromApp" sap:VirtualizedContainerService.HintSize="626,92" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xD;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xD;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xD;&#xA;      &lt;xs:complexType&gt;&#xD;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xD;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xD;&#xA;            &lt;xs:complexType&gt;&#xD;&#xA;              &lt;xs:sequence&gt;&#xD;&#xA;                &lt;xs:element name=&quot;LineNr&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Next_LineNr&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Next_LineNr2&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;MachGrpCode&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;ProdBOOPartDescription&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Qty&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;MachineUren&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;ManUren&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Memo&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;              &lt;/xs:sequence&gt;&#xD;&#xA;            &lt;/xs:complexType&gt;&#xD;&#xA;          &lt;/xs:element&gt;&#xD;&#xA;        &lt;/xs:choice&gt;&#xD;&#xA;      &lt;/xs:complexType&gt;&#xD;&#xA;    &lt;/xs:element&gt;&#xD;&#xA;  &lt;/xs:schema&gt;&#xD;&#xA;&lt;/NewDataSet&gt;" />
-      <Assign sap:VirtualizedContainerService.HintSize="626,114" sap2010:WorkflowViewState.IdRef="Assign_2">
+      <ui:BuildDataTable DataTable="[dt_BewerkingenOfPD_FromApp]" DisplayName="Build dt_BewerkingenOfPD_FromApp" sap:VirtualizedContainerService.HintSize="545.3333333333334,92" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xD;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xD;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xD;&#xA;      &lt;xs:complexType&gt;&#xD;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xD;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xD;&#xA;            &lt;xs:complexType&gt;&#xD;&#xA;              &lt;xs:sequence&gt;&#xD;&#xA;                &lt;xs:element name=&quot;LineNr&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Next_LineNr&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Next_LineNr2&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;MachGrpCode&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;ProdBOOPartDescription&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Qty&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;UrenType&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;MachineUren&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;ManUren&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Memo&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;              &lt;/xs:sequence&gt;&#xD;&#xA;            &lt;/xs:complexType&gt;&#xD;&#xA;          &lt;/xs:element&gt;&#xD;&#xA;        &lt;/xs:choice&gt;&#xD;&#xA;      &lt;/xs:complexType&gt;&#xD;&#xA;    &lt;/xs:element&gt;&#xD;&#xA;  &lt;/xs:schema&gt;&#xD;&#xA;&lt;/NewDataSet&gt;" />
+      <Assign sap:VirtualizedContainerService.HintSize="545.3333333333334,176.66666666666666" sap2010:WorkflowViewState.IdRef="Assign_2">
         <Assign.To>
           <OutArgument x:TypeArguments="x:Int32">[rownumber]</OutArgument>
         </Assign.To>
@@ -188,17 +188,16 @@
           <InArgument x:TypeArguments="x:Int32">0</InArgument>
         </Assign.Value>
       </Assign>
-      <ui:RepeatNumberOfTimesX DisplayName="Repeat Number of Times" sap:VirtualizedContainerService.HintSize="626,1677" sap2010:WorkflowViewState.IdRef="RepeatNumberOfTimesX_1" NumberOfTimes="[TotalBewerkingen]" StartAt="1">
+      <ui:RepeatNumberOfTimesX DisplayName="Repeat Number of Times" sap:VirtualizedContainerService.HintSize="545.3333333333334,1712.6666666666667" sap2010:WorkflowViewState.IdRef="RepeatNumberOfTimesX_1" NumberOfTimes="[TotalBewerkingen]" StartAt="1">
         <ui:RepeatNumberOfTimesX.Body>
           <ActivityAction x:TypeArguments="x:Int32">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentItem" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="592,1481" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="511.3333333333333,1511.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_3">
               <Sequence.Variables>
                 <Variable x:TypeArguments="x:String" Name="Regelnummer" />
                 <Variable x:TypeArguments="x:String" Name="Capaciteitsgroep" />
-                <Variable x:TypeArguments="x:String" Name="BewerkingTussenvoegen" />
                 <Variable x:TypeArguments="x:String" Name="Onderdeel" />
                 <Variable x:TypeArguments="x:String" Name="PDnummer" />
                 <Variable x:TypeArguments="x:String" Name="Machinecyclus" />
@@ -207,13 +206,14 @@
                 <Variable x:TypeArguments="x:String" Name="Aantal" />
                 <Variable x:TypeArguments="x:String" Name="VolgendeBewerking" />
                 <Variable x:TypeArguments="x:String" Name="VolgendeBewerking2" />
+                <Variable x:TypeArguments="x:String" Name="UrenType" />
               </Sequence.Variables>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="530,427" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+              <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="477.3333333333333,425.3333333333333" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
                 <ui:MultipleAssign.AssignOperations>
                   <scg:List x:TypeArguments="ui:AssignOperation" Capacity="16">
                     <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
@@ -248,6 +248,14 @@
                         <InArgument x:TypeArguments="x:String">[List_Bewerkingen(rownumber).Aantal.ToString]</InArgument>
                       </ui:AssignOperation.Value>
                     </ui:AssignOperation>
+                    <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_13">
+                      <ui:AssignOperation.To>
+                        <OutArgument x:TypeArguments="x:String">[UrenType]</OutArgument>
+                      </ui:AssignOperation.To>
+                      <ui:AssignOperation.Value>
+                        <InArgument x:TypeArguments="x:String">[List_Bewerkingen(rownumber).UrenType.ToString.trim]</InArgument>
+                      </ui:AssignOperation.Value>
+                    </ui:AssignOperation>
                     <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_6">
                       <ui:AssignOperation.To>
                         <OutArgument x:TypeArguments="x:String">[Machinecyclus]</OutArgument>
@@ -272,14 +280,6 @@
                         <InArgument x:TypeArguments="x:String">[List_Bewerkingen(rownumber).Memonieuw.tostring]</InArgument>
                       </ui:AssignOperation.Value>
                     </ui:AssignOperation>
-                    <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_3">
-                      <ui:AssignOperation.To>
-                        <OutArgument x:TypeArguments="x:String">[BewerkingTussenvoegen]</OutArgument>
-                      </ui:AssignOperation.To>
-                      <ui:AssignOperation.Value>
-                        <InArgument x:TypeArguments="x:String">[List_Bewerkingen(rownumber).BewerkingTussenvoegen.ToString]</InArgument>
-                      </ui:AssignOperation.Value>
-                    </ui:AssignOperation>
                     <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_11">
                       <ui:AssignOperation.To>
                         <OutArgument x:TypeArguments="x:String">[VolgendeBewerking]</OutArgument>
@@ -299,21 +299,21 @@
                   </scg:List>
                 </ui:MultipleAssign.AssignOperations>
               </ui:MultipleAssign>
-              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Decode HTML - Invoke Workflow File (Shared\Decode HTML.xaml)" sap:VirtualizedContainerService.HintSize="530,177" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Shared\Decode HTML.xaml">
+              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Decode HTML - Invoke Workflow File (Shared\Decode HTML.xaml)" sap:VirtualizedContainerService.HintSize="477.3333333333333,177.33333333333334" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Shared\Decode HTML.xaml">
                 <ui:InvokeWorkflowFile.Arguments>
                   <InArgument x:TypeArguments="x:String" x:Key="HtmlText">[MemoNew]</InArgument>
                   <OutArgument x:TypeArguments="x:String" x:Key="CleanText">[MemoNew]</OutArgument>
                 </ui:InvokeWorkflowFile.Arguments>
               </ui:InvokeWorkflowFile>
-              <If Condition="[onderdeel = &quot;&quot; and MemoNew &lt;&gt; &quot;&quot;]" DisplayName="Add Zie Memo if needed" sap:VirtualizedContainerService.HintSize="530,466" sap2010:WorkflowViewState.IdRef="If_1">
+              <If Condition="[onderdeel = &quot;&quot; and MemoNew &lt;&gt; &quot;&quot;]" DisplayName="Add Zie Memo if needed" sap:VirtualizedContainerService.HintSize="477.3333333333333,458" sap2010:WorkflowViewState.IdRef="If_1">
                 <If.Then>
-                  <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="496,193" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                  <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,227.33333333333334" sap2010:WorkflowViewState.IdRef="Sequence_6">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <Assign DisplayName="Assign Onderdeel to Zie Memo" sap:VirtualizedContainerService.HintSize="434,105" sap2010:WorkflowViewState.IdRef="Assign_9">
+                    <Assign DisplayName="Assign Onderdeel to Zie Memo" sap:VirtualizedContainerService.HintSize="416,167.33333333333334" sap2010:WorkflowViewState.IdRef="Assign_9">
                       <Assign.To>
                         <OutArgument x:TypeArguments="x:String">[Onderdeel]</OutArgument>
                       </Assign.To>
@@ -324,7 +324,7 @@
                   </Sequence>
                 </If.Then>
                 <If.Else>
-                  <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,103" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                  <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,90.66666666666667" sap2010:WorkflowViewState.IdRef="Sequence_7">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -333,7 +333,7 @@
                   </Sequence>
                 </If.Else>
               </If>
-              <Assign sap:VirtualizedContainerService.HintSize="530,114" sap2010:WorkflowViewState.IdRef="Assign_1">
+              <Assign sap:VirtualizedContainerService.HintSize="477.3333333333333,176.66666666666666" sap2010:WorkflowViewState.IdRef="Assign_1">
                 <Assign.To>
                   <OutArgument x:TypeArguments="x:Int32">[rownumber]</OutArgument>
                 </Assign.To>
@@ -341,22 +341,22 @@
                   <InArgument x:TypeArguments="x:Int32">[rownumber + 1]</InArgument>
                 </Assign.Value>
               </Assign>
-              <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{Regelnummer,VolgendeBewerking,VolgendeBewerking2,Capaciteitsgroep,Onderdeel,aantal,Machinecyclus,Mancyclus,MemoNew}]" DataTable="[dt_BewerkingenOfPD_FromApp]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="530,209" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
+              <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{Regelnummer,VolgendeBewerking,VolgendeBewerking2,Capaciteitsgroep,Onderdeel,aantal,UrenType,Machinecyclus,Mancyclus,MemoNew}]" DataTable="[dt_BewerkingenOfPD_FromApp]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="477.3333333333333,214" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
             </Sequence>
           </ActivityAction>
         </ui:RepeatNumberOfTimesX.Body>
       </ui:RepeatNumberOfTimesX>
-      <ui:OutputDataTable DataTable="[dt_BewerkingenOfPD_FromApp]" DisplayName="Output Data Table as Text" sap:VirtualizedContainerService.HintSize="626,112" sap2010:WorkflowViewState.IdRef="OutputDataTable_1" Text="[str_dt_BewerkingenOfPD_FromApp]" />
-      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="626,164" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[str_dt_BewerkingenOfPD_FromApp]" />
+      <ui:OutputDataTable DataTable="[dt_BewerkingenOfPD_FromApp]" DisplayName="Output Data Table as Text" sap:VirtualizedContainerService.HintSize="545.3333333333334,114" sap2010:WorkflowViewState.IdRef="OutputDataTable_1" Text="[str_dt_BewerkingenOfPD_FromApp]" />
+      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="545.3333333333334,167.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[str_dt_BewerkingenOfPD_FromApp]" />
     </Sequence>
-    <Sequence DisplayName="Compare Data and split in Delete, Add and Modify" sap:VirtualizedContainerService.HintSize="688,453" sap2010:WorkflowViewState.IdRef="Sequence_5">
+    <Sequence DisplayName="Compare Data and split in Delete, Add and Modify" sap:VirtualizedContainerService.HintSize="579.3333333333334,612.6666666666666" sap2010:WorkflowViewState.IdRef="Sequence_5">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <Assign DisplayName="Assign dt_BewerkingenToDelete" sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="Assign_6">
+      <Assign DisplayName="Assign dt_BewerkingenToDelete" sap:VirtualizedContainerService.HintSize="416,176.66666666666666" sap2010:WorkflowViewState.IdRef="Assign_6">
         <Assign.To>
           <OutArgument x:TypeArguments="sd:DataTable">[dt_BewerkingenToDelete]</OutArgument>
         </Assign.To>
@@ -364,7 +364,7 @@
           <InArgument x:TypeArguments="sd:DataTable">[If((From q In dt_BewerkingenOfPD_FromQuery.AsEnumerable() Where Not dt_BewerkingenOfPD_FromApp.AsEnumerable().Any(Function(a) a("LineNr").ToString().Trim() = q("LineNr").ToString().Trim()) Select q).Any(), (From q In dt_BewerkingenOfPD_FromQuery.AsEnumerable() Where Not dt_BewerkingenOfPD_FromApp.AsEnumerable().Any(Function(a) a("LineNr").ToString().Trim() = q("LineNr").ToString().Trim()) Select q).CopyToDataTable(), dt_BewerkingenOfPD_FromQuery.Clone())]</InArgument>
         </Assign.Value>
       </Assign>
-      <Assign DisplayName="Assign dt_BewerkingenToAdd" sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="Assign_7">
+      <Assign DisplayName="Assign dt_BewerkingenToAdd" sap:VirtualizedContainerService.HintSize="416,176.66666666666666" sap2010:WorkflowViewState.IdRef="Assign_7">
         <Assign.To>
           <OutArgument x:TypeArguments="sd:DataTable">[dt_BewerkingenToAdd]</OutArgument>
         </Assign.To>
@@ -372,7 +372,7 @@
           <InArgument x:TypeArguments="sd:DataTable">[If((From a In dt_BewerkingenOfPD_FromApp.AsEnumerable() Where Not dt_BewerkingenOfPD_FromQuery.AsEnumerable().Any(Function(q) q("LineNr").ToString().Trim() = a("LineNr").ToString().Trim()) Select a).Any(), (From a In dt_BewerkingenOfPD_FromApp.AsEnumerable() Where Not dt_BewerkingenOfPD_FromQuery.AsEnumerable().Any(Function(q) q("LineNr").ToString().Trim() = a("LineNr").ToString().Trim()) Select a).CopyToDataTable(), dt_BewerkingenOfPD_FromApp.Clone())]</InArgument>
         </Assign.Value>
       </Assign>
-      <Assign DisplayName="Assign dt_BewerkingenToModify" sap:VirtualizedContainerService.HintSize="434,105" sap2010:WorkflowViewState.IdRef="Assign_8">
+      <Assign DisplayName="Assign dt_BewerkingenToModify" sap:VirtualizedContainerService.HintSize="416,167.33333333333334" sap2010:WorkflowViewState.IdRef="Assign_8">
         <Assign.To>
           <OutArgument x:TypeArguments="sd:DataTable">[dt_BewerkingenToModify]</OutArgument>
         </Assign.To>
@@ -381,28 +381,28 @@
         </Assign.Value>
       </Assign>
     </Sequence>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="2.1 Delete Bewerkingen - Invoke Workflow File (Process\2.1 Delete Bewerkingen.xaml)" sap:VirtualizedContainerService.HintSize="688,177" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Process\2.1 Delete Bewerkingen.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="2.1 Delete Bewerkingen - Invoke Workflow File (Process\2.1 Delete Bewerkingen.xaml)" sap:VirtualizedContainerService.HintSize="579.3333333333334,177.33333333333334" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Process\2.1 Delete Bewerkingen.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InArgument x:TypeArguments="sd:DataTable" x:Key="dt_BewerkingenToDelete">[dt_BewerkingenToDelete]</InArgument>
         <InArgument x:TypeArguments="ui:DatabaseConnection" x:Key="DatabaseConnection">[DatabaseConnection]</InArgument>
         <InArgument x:TypeArguments="x:String" x:Key="ProdHeaderDossierCode">[ProdHeaderDossierCode]</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="2.2 Add Bewerkingen - Invoke Workflow File (Process\2.2 Add Bewerkingen.xaml)" sap:VirtualizedContainerService.HintSize="688,177" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="Process\2.2 Add Bewerkingen.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="2.2 Add Bewerkingen - Invoke Workflow File (Process\2.2 Add Bewerkingen.xaml)" sap:VirtualizedContainerService.HintSize="579.3333333333334,177.33333333333334" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="Process\2.2 Add Bewerkingen.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InArgument x:TypeArguments="ui:DatabaseConnection" x:Key="DatabaseConnection">[DatabaseConnection]</InArgument>
         <InArgument x:TypeArguments="sd:DataTable" x:Key="dt_BewerkingenToAdd">[dt_BewerkingenToAdd]</InArgument>
         <InArgument x:TypeArguments="x:String" x:Key="ProdHeaderDossierCode">[ProdHeaderDossierCode]</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="2.3 Modify Bewerkingen - Invoke Workflow File (Process\2.3 Modify Bewerkingen.xaml)" sap:VirtualizedContainerService.HintSize="688,177" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="Process\2.3 Modify Bewerkingen.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="2.3 Modify Bewerkingen - Invoke Workflow File (Process\2.3 Modify Bewerkingen.xaml)" sap:VirtualizedContainerService.HintSize="579.3333333333334,177.33333333333334" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="Process\2.3 Modify Bewerkingen.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InArgument x:TypeArguments="sd:DataTable" x:Key="dt_BewerkingenToModify">[dt_BewerkingenToModify]</InArgument>
         <InArgument x:TypeArguments="ui:DatabaseConnection" x:Key="DatabaseConnection">[DatabaseConnection]</InArgument>
         <InArgument x:TypeArguments="x:String" x:Key="ProdHeaderDossierCode">[ProdHeaderDossierCode]</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="2.4 Write New Routing to Bewerkingen - Invoke Workflow File (Process\2.4 Write New Routing to Bewerkingen.xaml)" sap:VirtualizedContainerService.HintSize="688,168" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="Process\2.4 Write New Routing to Bewerkingen.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="2.4 Write New Routing to Bewerkingen - Invoke Workflow File (Process\2.4 Write New Routing to Bewerkingen.xaml)" sap:VirtualizedContainerService.HintSize="579.3333333333334,168" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="Process\2.4 Write New Routing to Bewerkingen.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InArgument x:TypeArguments="x:String" x:Key="ProdHeaderDossierCode">[ProdHeaderDossierCode]</InArgument>
         <InArgument x:TypeArguments="ui:DatabaseConnection" x:Key="DatabaseConnection">[DatabaseConnection]</InArgument>
