@@ -23,8 +23,6 @@
       <x:String>UiPath.Core</x:String>
       <x:String>UiPath.Core.Activities</x:String>
       <x:String>System.Windows.Markup</x:String>
-      <x:String>GlobalVariablesNamespace</x:String>
-      <x:String>GlobalConstantsNamespace</x:String>
       <x:String>System.ComponentModel</x:String>
       <x:String>System.Runtime.Serialization</x:String>
       <x:String>System.Xml.Serialization</x:String>
@@ -36,6 +34,8 @@
       <x:String>System.Security</x:String>
       <x:String>UiPath.Database</x:String>
       <x:String>UiPath.Database.Activities</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -98,20 +98,20 @@
       <AssemblyReference>Proces_C_trigger_que.Dq2GH2z2fIF1Odhe44AVgak</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Initialisation" sap:VirtualizedContainerService.HintSize="512,3229" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Initialisation" sap:VirtualizedContainerService.HintSize="1007.3333333333333,3248.6666666666665" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="Set key database variables based on tesrun or live" sap:VirtualizedContainerService.HintSize="450,286" sap2010:WorkflowViewState.IdRef="Sequence_8">
+    <Sequence DisplayName="Set key database variables based on tesrun or live" sap:VirtualizedContainerService.HintSize="450,259.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_8">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="ISAH Database Server" CacheStrategy="None" DisplayName="Get Asset ISAH Database Server" FolderPath="Fijne Werkvoorbereiding" sap:VirtualizedContainerService.HintSize="388,166" sap2010:WorkflowViewState.IdRef="GetRobotAsset_6">
+      <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="ISAH Database Server" CacheStrategy="None" DisplayName="Get Asset ISAH Database Server" FolderPath="Fijne Werkvoorbereiding" sap:VirtualizedContainerService.HintSize="416,167.33333333333334" sap2010:WorkflowViewState.IdRef="GetRobotAsset_6">
         <ui:GetRobotAsset.Value>
           <OutArgument x:TypeArguments="x:String">[GlobalVariablesNamespace.GlobalVariables.Server]</OutArgument>
         </ui:GetRobotAsset.Value>
@@ -123,26 +123,27 @@
         </sap:WorkflowViewStateService.ViewState>
       </ui:GetRobotAsset>
     </Sequence>
-    <Sequence DisplayName="Retrieve all queries" sap:VirtualizedContainerService.HintSize="450,2687" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence DisplayName="Retrieve all queries" sap:VirtualizedContainerService.HintSize="450,2798.6666666666665" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:ReadTextFile File="{x:Null}" Content="[GlobalVariablesNamespace.GlobalVariables.DeleteAllBewerkingenFromPDQuery]" DisplayName="Get DeleteAllBewerkingenFromPDQuery" FileName="Data\Query's\DeleteAllBewerkingenFromPDQuery.sql" sap:VirtualizedContainerService.HintSize="388,112" sap2010:WorkflowViewState.IdRef="ReadTextFile_8" />
-      <ui:ReadTextFile File="{x:Null}" Content="[GlobalVariablesNamespace.GlobalVariables.CopyReferenceToPDQuery]" DisplayName="Get CopyReferenceToPDQuery" FileName="Data\Query's\CopyReferenceToPDQuery.sql" sap:VirtualizedContainerService.HintSize="388,112" sap2010:WorkflowViewState.IdRef="ReadTextFile_7" />
-      <ui:ReadTextFile File="{x:Null}" Content="[GlobalVariablesNamespace.GlobalVariables.CorrectMachAndManHoursInPDQuery]" DisplayName="Get CorrectMachAndManHoursInPDQuery" FileName="Data\Query's\CorrectMachAndManHoursInPDQuery.sql" sap:VirtualizedContainerService.HintSize="388,112" sap2010:WorkflowViewState.IdRef="ReadTextFile_9" />
-      <ui:ReadTextFile File="{x:Null}" Content="[GlobalVariablesNamespace.GlobalVariables.UpdateMachCodeForProdBooLineNrQuery]" DisplayName="Get UpdateMachCodeForProdBooLineNrQuery" FileName="Data\Query's\UpdateMachCodeForProdBooLineNrQuery.sql" sap:VirtualizedContainerService.HintSize="388,112" sap2010:WorkflowViewState.IdRef="ReadTextFile_10" />
-      <ui:ReadTextFile File="{x:Null}" Content="[GlobalVariablesNamespace.GlobalVariables.UpdateMachineUrenForProdBooLineNrQuery]" DisplayName="Get UpdateMachineUrenForProdBooLineNrQuery" FileName="Data\Query's\UpdateMachineUrenForProdBooLineNrQuery.sql" sap:VirtualizedContainerService.HintSize="388,112" sap2010:WorkflowViewState.IdRef="ReadTextFile_11" />
-      <ui:ReadTextFile File="{x:Null}" Content="[GlobalVariablesNamespace.GlobalVariables.UpdateManUrenForProdBooLineNrQuery]" DisplayName="Get UpdateManUrenForProdBooLineNrQuery" FileName="Data\Query's\UpdateManUrenForProdBooLineNrQuery.sql" sap:VirtualizedContainerService.HintSize="388,112" sap2010:WorkflowViewState.IdRef="ReadTextFile_12" />
-      <ui:ReadTextFile File="{x:Null}" Content="[GlobalVariablesNamespace.GlobalVariables.UpdatePDQtyScreen0092Query]" DisplayName="Get UpdatePDQtyScreen0092Query" FileName="Data\Query's\UpdatePDQtyScreen0092Query.sql" sap:VirtualizedContainerService.HintSize="388,112" sap2010:WorkflowViewState.IdRef="ReadTextFile_13" />
-      <ui:ReadTextFile File="{x:Null}" Content="[GlobalVariablesNamespace.GlobalVariables.UpdatePDQtyScreen0094Query]" DisplayName="Get UpdatePDQtyScreen0094Query" FileName="Data\Query's\UpdatePDQtyScreen0094Query.sql" sap:VirtualizedContainerService.HintSize="388,112" sap2010:WorkflowViewState.IdRef="ReadTextFile_14" />
-      <ui:ReadTextFile File="{x:Null}" Content="[GlobalVariablesNamespace.GlobalVariables.UpdateQtyForSawingRowQuery]" DisplayName="Get UpdateQtyForSawingRowQuery" FileName="Data\Query's\UpdateQtyForSawingRowQuery.sql" sap:VirtualizedContainerService.HintSize="388,112" sap2010:WorkflowViewState.IdRef="ReadTextFile_16" />
-      <ui:ReadTextFile File="{x:Null}" Content="[GlobalVariablesNamespace.GlobalVariables.UpdateQtyAndSawingDescriptionForSawingRowQuery]" DisplayName="Get UpdateQtyAndSawingDescriptionForSawingRowQuery" FileName="Data\Query's\UpdateQtyAndSawingDescriptionForSawingRowQuery.sql" sap:VirtualizedContainerService.HintSize="388,112" sap2010:WorkflowViewState.IdRef="ReadTextFile_15" />
-      <ui:ReadTextFile File="{x:Null}" Content="[GlobalVariablesNamespace.GlobalVariables.GetAllBewerkingRowsOfPDQuery]" DisplayName="Get GetAllBewerkingRowsOfPDQuery" FileName="Data\Query's\GetAllBewerkingRowsOfPD.sql" sap:VirtualizedContainerService.HintSize="388,112" sap2010:WorkflowViewState.IdRef="ReadTextFile_17" />
-      <ui:ReadTextFile File="{x:Null}" Content="[GlobalVariablesNamespace.GlobalVariables.DeleteBewerkingRowOfPD]" DisplayName="Get DeleteBewerkingRowOfPD" FileName="Data\Query's\DeleteBewerkingRowOfPD.sql" sap:VirtualizedContainerService.HintSize="388,112" sap2010:WorkflowViewState.IdRef="ReadTextFile_21" />
-      <ui:ReadTextFile File="{x:Null}" Content="[GlobalVariablesNamespace.GlobalVariables.CreateBewerkingRowofPD]" DisplayName="Get CreateBewerkingRowofPD" FileName="Data\Query's\CreateBewerkingRowofPD.sql" sap:VirtualizedContainerService.HintSize="388,112" sap2010:WorkflowViewState.IdRef="ReadTextFile_20" />
+      <ui:ReadTextFile File="{x:Null}" Content="[GlobalVariablesNamespace.GlobalVariables.CheckIfStatusAlreadyProcessedQuery]" DisplayName="Get CheckIfStatusAlreadyProcessed" FileName="Data\Query's\CheckIfStatusAlreadyProcessed.sql" sap:VirtualizedContainerService.HintSize="416,114" sap2010:WorkflowViewState.IdRef="ReadTextFile_8" />
+      <ui:ReadTextFile File="{x:Null}" Content="[GlobalVariablesNamespace.GlobalVariables.DeleteAllBewerkingenFromPDQuery]" DisplayName="Get DeleteAllBewerkingenFromPDQuery" FileName="Data\Query's\DeleteAllBewerkingenFromPDQuery.sql" sap:VirtualizedContainerService.HintSize="416,114" sap2010:WorkflowViewState.IdRef="ReadTextFile_31" />
+      <ui:ReadTextFile File="{x:Null}" Content="[GlobalVariablesNamespace.GlobalVariables.CopyReferenceToPDQuery]" DisplayName="Get CopyReferenceToPDQuery" FileName="Data\Query's\CopyReferenceToPDQuery.sql" sap:VirtualizedContainerService.HintSize="416,114" sap2010:WorkflowViewState.IdRef="ReadTextFile_7" />
+      <ui:ReadTextFile File="{x:Null}" Content="[GlobalVariablesNamespace.GlobalVariables.CorrectMachAndManHoursInPDQuery]" DisplayName="Get CorrectMachAndManHoursInPDQuery" FileName="Data\Query's\CorrectMachAndManHoursInPDQuery.sql" sap:VirtualizedContainerService.HintSize="416,114" sap2010:WorkflowViewState.IdRef="ReadTextFile_9" />
+      <ui:ReadTextFile File="{x:Null}" Content="[GlobalVariablesNamespace.GlobalVariables.UpdateMachCodeForProdBooLineNrQuery]" DisplayName="Get UpdateMachCodeForProdBooLineNrQuery" FileName="Data\Query's\UpdateMachCodeForProdBooLineNrQuery.sql" sap:VirtualizedContainerService.HintSize="416,114" sap2010:WorkflowViewState.IdRef="ReadTextFile_10" />
+      <ui:ReadTextFile File="{x:Null}" Content="[GlobalVariablesNamespace.GlobalVariables.UpdateMachineUrenForProdBooLineNrQuery]" DisplayName="Get UpdateMachineUrenForProdBooLineNrQuery" FileName="Data\Query's\UpdateMachineUrenForProdBooLineNrQuery.sql" sap:VirtualizedContainerService.HintSize="416,114" sap2010:WorkflowViewState.IdRef="ReadTextFile_11" />
+      <ui:ReadTextFile File="{x:Null}" Content="[GlobalVariablesNamespace.GlobalVariables.UpdateManUrenForProdBooLineNrQuery]" DisplayName="Get UpdateManUrenForProdBooLineNrQuery" FileName="Data\Query's\UpdateManUrenForProdBooLineNrQuery.sql" sap:VirtualizedContainerService.HintSize="416,114" sap2010:WorkflowViewState.IdRef="ReadTextFile_12" />
+      <ui:ReadTextFile File="{x:Null}" Content="[GlobalVariablesNamespace.GlobalVariables.UpdatePDQtyScreen0092Query]" DisplayName="Get UpdatePDQtyScreen0092Query" FileName="Data\Query's\UpdatePDQtyScreen0092Query.sql" sap:VirtualizedContainerService.HintSize="416,114" sap2010:WorkflowViewState.IdRef="ReadTextFile_13" />
+      <ui:ReadTextFile File="{x:Null}" Content="[GlobalVariablesNamespace.GlobalVariables.UpdatePDQtyScreen0094Query]" DisplayName="Get UpdatePDQtyScreen0094Query" FileName="Data\Query's\UpdatePDQtyScreen0094Query.sql" sap:VirtualizedContainerService.HintSize="416,114" sap2010:WorkflowViewState.IdRef="ReadTextFile_14" />
+      <ui:ReadTextFile File="{x:Null}" Content="[GlobalVariablesNamespace.GlobalVariables.UpdateQtyForSawingRowQuery]" DisplayName="Get UpdateQtyForSawingRowQuery" FileName="Data\Query's\UpdateQtyForSawingRowQuery.sql" sap:VirtualizedContainerService.HintSize="416,114" sap2010:WorkflowViewState.IdRef="ReadTextFile_16" />
+      <ui:ReadTextFile File="{x:Null}" Content="[GlobalVariablesNamespace.GlobalVariables.UpdateQtyAndSawingDescriptionForSawingRowQuery]" DisplayName="Get UpdateQtyAndSawingDescriptionForSawingRowQuery" FileName="Data\Query's\UpdateQtyAndSawingDescriptionForSawingRowQuery.sql" sap:VirtualizedContainerService.HintSize="416,114" sap2010:WorkflowViewState.IdRef="ReadTextFile_15" />
+      <ui:ReadTextFile File="{x:Null}" Content="[GlobalVariablesNamespace.GlobalVariables.GetAllBewerkingRowsOfPDQuery]" DisplayName="Get GetAllBewerkingRowsOfPDQuery" FileName="Data\Query's\GetAllBewerkingRowsOfPD.sql" sap:VirtualizedContainerService.HintSize="416,114" sap2010:WorkflowViewState.IdRef="ReadTextFile_17" />
+      <ui:ReadTextFile File="{x:Null}" Content="[GlobalVariablesNamespace.GlobalVariables.DeleteBewerkingRowOfPD]" DisplayName="Get DeleteBewerkingRowOfPD" FileName="Data\Query's\DeleteBewerkingRowOfPD.sql" sap:VirtualizedContainerService.HintSize="416,114" sap2010:WorkflowViewState.IdRef="ReadTextFile_21" />
+      <ui:ReadTextFile File="{x:Null}" Content="[GlobalVariablesNamespace.GlobalVariables.CreateBewerkingRowofPD]" DisplayName="Get CreateBewerkingRowofPD" FileName="Data\Query's\CreateBewerkingRowofPD.sql" sap:VirtualizedContainerService.HintSize="416,114" sap2010:WorkflowViewState.IdRef="ReadTextFile_20" />
       <ui:ReadTextFile File="{x:Null}" Content="[GlobalVariablesNamespace.GlobalVariables.UpdateBewerkingRowofPD]" DisplayName="Get UpdateBewerkingRowofPD" FileName="Data\Query's\UpdateBewerkingRowofPD.sql" sap:VirtualizedContainerService.HintSize="388,112" sap2010:WorkflowViewState.IdRef="ReadTextFile_18" />
       <ui:ReadTextFile File="{x:Null}" Content="[GlobalVariablesNamespace.GlobalVariables.UpdateMemoOfBewerkingRowOfPD]" DisplayName="Get UpdateMemoOfBewerkingRowOfPD" FileName="Data\Query's\UpdateMemoOfBewerkingRowOfPD.sql" sap:VirtualizedContainerService.HintSize="388,112" sap2010:WorkflowViewState.IdRef="ReadTextFile_19" />
       <ui:ReadTextFile File="{x:Null}" Content="[GlobalVariablesNamespace.GlobalVariables.UpdateMemoOfBewerkingRowOfPD]" DisplayName="Get UpdateMemoOfBewerkingRowOfPD" FileName="Data\Query's\UpdateMemoOfBewerkingRowOfPD.sql" sap:VirtualizedContainerService.HintSize="388,112" sap2010:WorkflowViewState.IdRef="ReadTextFile_23" />

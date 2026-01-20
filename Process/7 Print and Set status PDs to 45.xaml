@@ -140,44 +140,70 @@
       <AssemblyReference>Proces_C_trigger_que.Dq2GH2z2fIF1Odhe44AVgak</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="change_status_to_41" sap:VirtualizedContainerService.HintSize="416,1102" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="change_status_to_45" sap:VirtualizedContainerService.HintSize="784.6666666666666,1141.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="dt_UpdateTo45Status" />
       <Variable x:TypeArguments="ui:DatabaseConnection" Name="DatabaseConnection" />
+      <Variable x:TypeArguments="x:Boolean" Name="FileExists" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Establish Database connection - Invoke Workflow File (Shared\Establish Database connection.xaml)" sap:VirtualizedContainerService.HintSize="354,177" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Shared\Establish Database connection.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Establish Database connection - Invoke Workflow File (Shared\Establish Database connection.xaml)" sap:VirtualizedContainerService.HintSize="452,177.33333333333334" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Shared\Establish Database connection.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <OutArgument x:TypeArguments="ui:DatabaseConnection" x:Key="DatabaseConnection">[DatabaseConnection]</OutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Login into ISAH - Invoke Workflow File (Shared\Login into ISAH.xaml)" sap:VirtualizedContainerService.HintSize="354,177" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Process\7.1 Login into ISAH.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Login into ISAH - Invoke Workflow File (Shared\Login into ISAH.xaml)" sap:VirtualizedContainerService.HintSize="452,177.33333333333334" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Process\7.1 Login into ISAH.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <OutArgument x:TypeArguments="x:Boolean" x:Key="LoginSuccessful" />
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="7.2 Print voorblad - Invoke Workflow File (Process\7.2 Print voorblad.xaml)" sap:VirtualizedContainerService.HintSize="354,177" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Process\7.2 Print voorblad.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="7.2 Print voorblad - Invoke Workflow File (Process\7.2 Print voorblad.xaml)" sap:VirtualizedContainerService.HintSize="452,177.33333333333334" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Process\7.2 Print voorblad.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InArgument x:TypeArguments="x:String" x:Key="ProdHeaderDossierCode">[ProdHeaderDossierCode]</InArgument>
+        <OutArgument x:TypeArguments="x:Boolean" x:Key="FileExists">[FileExists]</OutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <ui:LogMessage DisplayName="Changing quantity of productiondossier" sap:VirtualizedContainerService.HintSize="354,173" sap2010:WorkflowViewState.IdRef="LogMessage_31" Message="[&quot;Changing status of productiondossier &quot; + ProdHeaderDossierCode]">
-      <sap:WorkflowViewStateService.ViewState>
-        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-          <x:Boolean x:Key="IsPinned">False</x:Boolean>
-        </scg:Dictionary>
-      </sap:WorkflowViewStateService.ViewState>
-    </ui:LogMessage>
-    <ui:ExecuteQuery ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" DataTable="[dt_UpdateTo45Status]" DisplayName="Update to Status 45" ExistingDbConnection="[DatabaseConnection]" sap:VirtualizedContainerService.HintSize="354,146" sap2010:WorkflowViewState.IdRef="ExecuteQuery_1" Sql="[QueryToUpdatePDStatus&#x9;.replace(&quot;{ProdHeaderDossierCode}&quot;,ProdHeaderDossierCode).replace(&quot;{NewStatus}&quot;,&quot;45&quot;)]">
-      <ui:ExecuteQuery.Parameters>
-        <scg:Dictionary x:TypeArguments="x:String, Argument" />
-      </ui:ExecuteQuery.Parameters>
-    </ui:ExecuteQuery>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="354,164" sap2010:WorkflowViewState.IdRef="LogMessage_32" Message="[dt_UpdateTo45Status.rows(0)(&quot;Message&quot;).tostring]" />
+    <If Condition="[FileExists]" sap:VirtualizedContainerService.HintSize="452,586.6666666666666" sap2010:WorkflowViewState.IdRef="If_1">
+      <If.Then>
+        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,228" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="7.3 Set status to 45 - Invoke Workflow File (7.3 Set status to 45.xaml)" sap:VirtualizedContainerService.HintSize="416,168" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="Process\7.3 Set status to 45.xaml">
+            <ui:InvokeWorkflowFile.Arguments>
+              <InArgument x:TypeArguments="x:String" x:Key="ProdHeaderDossierCode">[ProdHeaderDossierCode]</InArgument>
+              <InOutArgument x:TypeArguments="sd:DataTable" x:Key="dt_UpdateTo45Status">[dt_UpdateTo45Status]</InOutArgument>
+              <InArgument x:TypeArguments="ui:DatabaseConnection" x:Key="DatabaseConnection">[DatabaseConnection]</InArgument>
+            </ui:InvokeWorkflowFile.Arguments>
+          </ui:InvokeWorkflowFile>
+        </Sequence>
+      </If.Then>
+      <If.Else>
+        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,228" sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Send Email - Invoke Workflow File (Shared\Send Email.xaml)" sap:VirtualizedContainerService.HintSize="416,168" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="Shared\Send Email.xaml">
+            <ui:InvokeWorkflowFile.Arguments>
+              <InArgument x:TypeArguments="x:String" x:Key="CC" />
+              <InArgument x:TypeArguments="x:String" x:Key="EmailSubject">["Voorblad failure PD: " + ProdHeaderDossierCode]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="Message1">Ik heb meerdere keren geprobeerd om het voorblad uit te printen maar het is helaas niet gelukt.</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="Message2">Wil je het zelf nog een keer proberen en de status naar 45 zetten?</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="BCC" />
+              <InArgument x:TypeArguments="x:String" x:Key="ResultsTable" />
+              <InArgument x:TypeArguments="x:String" x:Key="ExceptionScreenshot" />
+            </ui:InvokeWorkflowFile.Arguments>
+          </ui:InvokeWorkflowFile>
+        </Sequence>
+      </If.Else>
+    </If>
   </Sequence>
 </Activity>

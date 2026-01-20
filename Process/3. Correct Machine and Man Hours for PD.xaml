@@ -31,8 +31,6 @@
       <x:String>UiPath.Core</x:String>
       <x:String>UiPath.Core.Activities</x:String>
       <x:String>System.Windows.Markup</x:String>
-      <x:String>GlobalVariablesNamespace</x:String>
-      <x:String>GlobalConstantsNamespace</x:String>
       <x:String>System.Reflection</x:String>
       <x:String>System.ComponentModel</x:String>
       <x:String>System.Runtime.Serialization</x:String>
@@ -65,6 +63,8 @@
       <x:String>UiPath.OCR.Contracts.Activities</x:String>
       <x:String>UiPath.Platform.ResourceHandling</x:String>
       <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -149,7 +149,7 @@
       <x:Boolean x:Key="ShouldCollapseAll">False</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence sap:VirtualizedContainerService.HintSize="636,2079" sap2010:WorkflowViewState.IdRef="Sequence_64">
+  <Sequence sap:VirtualizedContainerService.HintSize="1007.3333333333333,2067.3333333333335" sap2010:WorkflowViewState.IdRef="Sequence_64">
     <Sequence.Variables>
       <Variable x:TypeArguments="ui:DatabaseConnection" Name="DatabaseConnection" />
       <Variable x:TypeArguments="x:Int32" Default="0" Name="AttemptCount" />
@@ -161,7 +161,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Establish Database connection - Invoke Workflow File (Establish Database connection.xaml)" sap:VirtualizedContainerService.HintSize="574,57" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_43" UnSafe="False" WorkflowFileName="Shared\Establish Database connection.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Establish Database connection - Invoke Workflow File (Establish Database connection.xaml)" sap:VirtualizedContainerService.HintSize="502,57.333333333333336" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_43" UnSafe="False" WorkflowFileName="Shared\Establish Database connection.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <OutArgument x:TypeArguments="ui:DatabaseConnection" x:Key="DatabaseConnection">[DatabaseConnection]</OutArgument>
       </ui:InvokeWorkflowFile.Arguments>
@@ -172,7 +172,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:InvokeWorkflowFile>
-    <ui:LogMessage DisplayName="Log Flow started" sap:VirtualizedContainerService.HintSize="574,57" sap2010:WorkflowViewState.IdRef="LogMessage_69" Message="[&quot;---&quot;+environment.newline+&quot;Flow: 'Correct hours and buffertimes in PD's' started&quot;]">
+    <ui:LogMessage DisplayName="Log Flow started" sap:VirtualizedContainerService.HintSize="502,57.333333333333336" sap2010:WorkflowViewState.IdRef="LogMessage_69" Message="[&quot;---&quot;+environment.newline+&quot;Flow: 'Correct hours and buffertimes in PD's' started&quot;]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -180,7 +180,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:LogMessage>
-    <ui:LogMessage DisplayName="Log Processing ProdHeaderDossierCode.." sap:VirtualizedContainerService.HintSize="574,57" sap2010:WorkflowViewState.IdRef="LogMessage_95" Message="[&quot;Processing ProdHeaderDossierCode &quot; + ProdHeaderDossierCode + &quot;..&quot;]">
+    <ui:LogMessage DisplayName="Log Processing ProdHeaderDossierCode.." sap:VirtualizedContainerService.HintSize="502,57.333333333333336" sap2010:WorkflowViewState.IdRef="LogMessage_95" Message="[&quot;Processing ProdHeaderDossierCode &quot; + ProdHeaderDossierCode + &quot;..&quot;]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -188,30 +188,30 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:LogMessage>
-    <ui:ExecuteQuery ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" DataTable="[dt_PD_Process_Info]" DisplayName="Retrieve Sub PD Process Info" ExistingDbConnection="[DatabaseConnection]" sap:VirtualizedContainerService.HintSize="574,57" sap2010:WorkflowViewState.IdRef="ExecuteQuery_49" Sql="[CorrectMachAndManHoursInPDQuery.replace(&quot;{ProdHeaderDossierCode}&quot;,ProdHeaderDossierCode).ToString]">
+    <ui:ExecuteQuery ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" DataTable="[dt_PD_Process_Info]" DisplayName="Retrieve Sub PD Process Info" ExistingDbConnection="[DatabaseConnection]" sap:VirtualizedContainerService.HintSize="502,148" sap2010:WorkflowViewState.IdRef="ExecuteQuery_49" Sql="[CorrectMachAndManHoursInPDQuery.replace(&quot;{ProdHeaderDossierCode}&quot;,ProdHeaderDossierCode).ToString]">
       <ui:ExecuteQuery.Parameters>
         <scg:Dictionary x:TypeArguments="x:String, Argument" />
       </ui:ExecuteQuery.Parameters>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-          <x:Boolean x:Key="IsPinned">True</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:ExecuteQuery>
-    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_PD_Process_Info]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="574,1763" sap2010:WorkflowViewState.IdRef="ForEachRow_40">
+    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_PD_Process_Info]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="502,1724.6666666666667" sap2010:WorkflowViewState.IdRef="ForEachRow_40">
       <ui:ForEachRow.Body>
         <ActivityAction x:TypeArguments="sd:DataRow">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="540,1576" sap2010:WorkflowViewState.IdRef="Sequence_744">
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="500,1550" sap2010:WorkflowViewState.IdRef="Sequence_744">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:LogMessage DisplayName="Log Change Info" sap:VirtualizedContainerService.HintSize="478,173" sap2010:WorkflowViewState.IdRef="LogMessage_103" Message="[&quot;ProdBOOLineNr: &quot; + CurrentRow(&quot;ProdBOOLineNr&quot;).tostring + Environment.newline +&#xA;&quot;Type &quot; + CurrentRow(&quot;SoortUren&quot;).tostring + Environment.newline +&#xA;&quot;MachcodeOld: &quot; + CurrentRow(&quot;MachcodeOld&quot;).tostring + &quot; MachcodeNew: &quot; + CurrentRow(&quot;MachcodeNew&quot;).tostring + Environment.newline +&#xA;&quot;MachineUrenOld: &quot; + CurrentRow(&quot;MachineUrenOld&quot;).tostring + &quot; MachineUrenNew: &quot; + CurrentRow(&quot;MachineUrenNew&quot;).tostring + Environment.newline +&#xA;&quot;ManUrenOld: &quot; + CurrentRow(&quot;ManUrenOld&quot;).tostring + &quot; ManUrenNew: &quot; + CurrentRow(&quot;ManUrenNew&quot;).tostring + Environment.newline]">
+            <ui:LogMessage DisplayName="Log Change Info" sap:VirtualizedContainerService.HintSize="466,176.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_103" Message="[&quot;ProdBOOLineNr: &quot; + CurrentRow(&quot;ProdBOOLineNr&quot;).tostring + Environment.newline +&#xA;&quot;Type &quot; + CurrentRow(&quot;SoortUren&quot;).tostring + Environment.newline +&#xA;&quot;MachcodeOld: &quot; + CurrentRow(&quot;MachcodeOld&quot;).tostring + &quot; MachcodeNew: &quot; + CurrentRow(&quot;MachcodeNew&quot;).tostring + Environment.newline +&#xA;&quot;MachineUrenOld: &quot; + CurrentRow(&quot;MachineUrenOld&quot;).tostring + &quot; MachineUrenNew: &quot; + CurrentRow(&quot;MachineUrenNew&quot;).tostring + Environment.newline +&#xA;&quot;ManUrenOld: &quot; + CurrentRow(&quot;ManUrenOld&quot;).tostring + &quot; ManUrenNew: &quot; + CurrentRow(&quot;ManUrenNew&quot;).tostring + Environment.newline]">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -219,18 +219,18 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:LogMessage>
-            <ui:ExecuteQuery ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" DataTable="[dt_result_Query]" DisplayName="Empty Machcode" ExistingDbConnection="[DatabaseConnection]" sap:VirtualizedContainerService.HintSize="478,57" sap2010:WorkflowViewState.IdRef="ExecuteQuery_50" Sql="[(UpdateMachCodeForProdBooLineNrQuery.replace(&quot;{ProdHeaderDossierCode}&quot;,ProdHeaderDossierCode).ToString).replace(&quot;{ProdBOOLineNr}&quot;,Currentrow(&quot;ProdBOOLineNr&quot;).tostring).tostring]">
+            <ui:ExecuteQuery ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" DataTable="[dt_result_Query]" DisplayName="Empty Machcode" ExistingDbConnection="[DatabaseConnection]" sap:VirtualizedContainerService.HintSize="466,148" sap2010:WorkflowViewState.IdRef="ExecuteQuery_50" Sql="[(UpdateMachCodeForProdBooLineNrQuery.replace(&quot;{ProdHeaderDossierCode}&quot;,ProdHeaderDossierCode).ToString).replace(&quot;{ProdBOOLineNr}&quot;,Currentrow(&quot;ProdBOOLineNr&quot;).tostring).tostring]">
               <ui:ExecuteQuery.Parameters>
                 <scg:Dictionary x:TypeArguments="x:String, Argument" />
               </ui:ExecuteQuery.Parameters>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                  <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:ExecuteQuery>
-            <ui:LogMessage DisplayName="Log Result Empty Machcode" sap:VirtualizedContainerService.HintSize="478,173" sap2010:WorkflowViewState.IdRef="LogMessage_104" Message="[dt_result_Query.rows(0)(&quot;Message&quot;).tostring]">
+            <ui:LogMessage DisplayName="Log Result Empty Machcode" sap:VirtualizedContainerService.HintSize="466,176.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_104" Message="[dt_result_Query.rows(0)(&quot;Message&quot;).tostring]">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -238,9 +238,9 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:LogMessage>
-            <ui:IfElseIfV2 Condition="[CurrentRow(&quot;PlanningBasedOnType&quot;).ToString() = &quot;1&quot;]" DisplayName="If Soort Uren = MachineUren Else IF: Soort Uren = ManUren" sap:VirtualizedContainerService.HintSize="478,1085" sap2010:WorkflowViewState.IdRef="IfElseIfV2_1">
+            <ui:IfElseIfV2 Condition="[CurrentRow(&quot;PlanningBasedOnType&quot;).ToString() = &quot;1&quot;]" DisplayName="If Soort Uren = MachineUren Else IF: Soort Uren = ManUren" sap:VirtualizedContainerService.HintSize="466,988.6666666666666" sap2010:WorkflowViewState.IdRef="IfElseIfV2_1">
               <ui:IfElseIfV2.Else>
-                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,25" sap2010:WorkflowViewState.IdRef="Sequence_747">
+                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="463,25" sap2010:WorkflowViewState.IdRef="Sequence_747">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -253,13 +253,13 @@
                 <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
                   <ui:IfElseIfBlock BlockType="ElseIf" Condition="[CurrentRow(&quot;PlanningBasedOnType&quot;).ToString() = &quot;2&quot;]" DisplayName="If else if block" sap2010:WorkflowViewState.IdRef="IfElseIfBlock_1">
                     <ui:IfElseIfBlock.Then>
-                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="416,398" sap2010:WorkflowViewState.IdRef="Sequence_746">
+                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="464,372.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_746">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <ui:ExecuteQuery ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" DataTable="[dt_result_Query]" DisplayName="Update Man Uren and Empty Machine Uren" ExistingDbConnection="[DatabaseConnection]" sap:VirtualizedContainerService.HintSize="354,146" sap2010:WorkflowViewState.IdRef="ExecuteQuery_52" Sql="[UpdateManUrenForProdBooLineNrQuery.Replace(&quot;{ProdHeaderDossierCode}&quot;, ProdHeaderDossierCode).Replace(&quot;{ProdBOOLineNr}&quot;, CurrentRow(&quot;ProdBOOLineNr&quot;).ToString()).Replace(&quot;{ManUrenNewInSec}&quot;, CurrentRow(&quot;ManUrenNewInSec&quot;).ToString())]">
+                        <ui:ExecuteQuery ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" DataTable="[dt_result_Query]" DisplayName="Update Man Uren and Empty Machine Uren" ExistingDbConnection="[DatabaseConnection]" sap:VirtualizedContainerService.HintSize="429,147" sap2010:WorkflowViewState.IdRef="ExecuteQuery_52" Sql="[UpdateManUrenForProdBooLineNrQuery.Replace(&quot;{ProdHeaderDossierCode}&quot;, ProdHeaderDossierCode).Replace(&quot;{ProdBOOLineNr}&quot;, CurrentRow(&quot;ProdBOOLineNr&quot;).ToString()).Replace(&quot;{ManUrenNewInSec}&quot;, CurrentRow(&quot;ManUrenNewInSec&quot;).ToString())]">
                           <ui:ExecuteQuery.Parameters>
                             <scg:Dictionary x:TypeArguments="x:String, Argument" />
                           </ui:ExecuteQuery.Parameters>
@@ -270,7 +270,7 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                         </ui:ExecuteQuery>
-                        <ui:LogMessage DisplayName="Log Result Update Man uren" sap:VirtualizedContainerService.HintSize="354,164" sap2010:WorkflowViewState.IdRef="LogMessage_106" Message="[dt_result_Query.rows(0)(&quot;Message&quot;).tostring]">
+                        <ui:LogMessage DisplayName="Log Result Update Man uren" sap:VirtualizedContainerService.HintSize="429,166" sap2010:WorkflowViewState.IdRef="LogMessage_106" Message="[dt_result_Query.rows(0)(&quot;Message&quot;).tostring]">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -284,13 +284,13 @@
                 </sc:BindingList>
               </ui:IfElseIfV2.ElseIfs>
               <ui:IfElseIfV2.Then>
-                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,398" sap2010:WorkflowViewState.IdRef="Sequence_745">
+                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="463,373" sap2010:WorkflowViewState.IdRef="Sequence_745">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:ExecuteQuery ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" DataTable="[dt_result_Query]" DisplayName="Update Machine Uren and Empty Man Uren" ExistingDbConnection="[DatabaseConnection]" sap:VirtualizedContainerService.HintSize="354,146" sap2010:WorkflowViewState.IdRef="ExecuteQuery_51" Sql="[UpdateMachineUrenForProdBooLineNrQuery.Replace(&quot;{ProdHeaderDossierCode}&quot;, ProdHeaderDossierCode).Replace(&quot;{ProdBOOLineNr}&quot;, CurrentRow(&quot;ProdBOOLineNr&quot;).ToString()).Replace(&quot;{MachineUrenNewInSec}&quot;, CurrentRow(&quot;MachineUrenNewInSec&quot;).ToString())]">
+                  <ui:ExecuteQuery ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" DataTable="[dt_result_Query]" DisplayName="Update Machine Uren and Empty Man Uren" ExistingDbConnection="[DatabaseConnection]" sap:VirtualizedContainerService.HintSize="429,147" sap2010:WorkflowViewState.IdRef="ExecuteQuery_51" Sql="[UpdateMachineUrenForProdBooLineNrQuery.Replace(&quot;{ProdHeaderDossierCode}&quot;, ProdHeaderDossierCode).Replace(&quot;{ProdBOOLineNr}&quot;, CurrentRow(&quot;ProdBOOLineNr&quot;).ToString()).Replace(&quot;{MachineUrenNewInSec}&quot;, CurrentRow(&quot;MachineUrenNewInSec&quot;).ToString())]">
                     <ui:ExecuteQuery.Parameters>
                       <scg:Dictionary x:TypeArguments="x:String, Argument" />
                     </ui:ExecuteQuery.Parameters>
@@ -301,7 +301,7 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </ui:ExecuteQuery>
-                  <ui:LogMessage DisplayName="Log Result Update Mach uren" sap:VirtualizedContainerService.HintSize="354,164" sap2010:WorkflowViewState.IdRef="LogMessage_105" Message="[dt_result_Query.rows(0)(&quot;Message&quot;).tostring]">
+                  <ui:LogMessage DisplayName="Log Result Update Mach uren" sap:VirtualizedContainerService.HintSize="429,166" sap2010:WorkflowViewState.IdRef="LogMessage_105" Message="[dt_result_Query.rows(0)(&quot;Message&quot;).tostring]">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>

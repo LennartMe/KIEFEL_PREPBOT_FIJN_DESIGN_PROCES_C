@@ -31,8 +31,6 @@
       <x:String>UiPath.Core</x:String>
       <x:String>UiPath.Core.Activities</x:String>
       <x:String>System.Windows.Markup</x:String>
-      <x:String>GlobalVariablesNamespace</x:String>
-      <x:String>GlobalConstantsNamespace</x:String>
       <x:String>System.Runtime.Serialization</x:String>
       <x:String>UiPath.UIAutomationNext.Enums</x:String>
       <x:String>UiPath.UIAutomationCore.Contracts</x:String>
@@ -48,6 +46,8 @@
       <x:String>System.Numerics</x:String>
       <x:String>UiPath.UIAutomationNext.Contracts</x:String>
       <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -120,8 +120,8 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Flow started" sap:VirtualizedContainerService.HintSize="1104,176.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;Login sequence started.&quot;]" />
-    <ui:RetryScope ContinueOnError="True" DisplayName="Retry Minimize all" sap:VirtualizedContainerService.HintSize="1104,57.333333333333336" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="2" RetryInterval="00:00:00">
+    <ui:LogMessage DisplayName="Log Flow started" sap:VirtualizedContainerService.HintSize="1104,175" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;Login sequence started.&quot;]" />
+    <ui:RetryScope ContinueOnError="True" DisplayName="Retry Minimize all" sap:VirtualizedContainerService.HintSize="1104,57" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="2" RetryInterval="00:00:00">
       <ui:RetryScope.ActivityBody>
         <ActivityAction>
           <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="416,136" sap2010:WorkflowViewState.IdRef="Sequence_20">
@@ -169,7 +169,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:RetryScope>
-    <Assign DisplayName="Set loginattempts to 0" sap:VirtualizedContainerService.HintSize="1104,176.66666666666666" sap2010:WorkflowViewState.IdRef="Assign_1">
+    <Assign DisplayName="Set loginattempts to 0" sap:VirtualizedContainerService.HintSize="1104,175" sap2010:WorkflowViewState.IdRef="Assign_1">
       <Assign.To>
         <OutArgument x:TypeArguments="x:Int32">[LoginAttempts]</OutArgument>
       </Assign.To>
@@ -177,15 +177,15 @@
         <InArgument x:TypeArguments="x:Int32">0</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" Condition="[LoginAttempts &lt;5 and LoginSuccessful = False]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="1104,4394" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
+    <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" Condition="[LoginAttempts &lt;5 and LoginSuccessful = False]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="1104,4393" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
       <ui:InterruptibleDoWhile.Body>
-        <Sequence DisplayName="ISAH Login" sap:VirtualizedContainerService.HintSize="1102,4271.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_10">
+        <Sequence DisplayName="ISAH Login" sap:VirtualizedContainerService.HintSize="1102,4271" sap2010:WorkflowViewState.IdRef="Sequence_10">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:KillProcess AppliesTo="{x:Null}" Process="{x:Null}" ContinueOnError="True" DisplayName="Kill Process" sap:VirtualizedContainerService.HintSize="1068,57.333333333333336" sap2010:WorkflowViewState.IdRef="KillProcess_1" ProcessName="Isah7.exe">
+          <ui:KillProcess AppliesTo="{x:Null}" Process="{x:Null}" ContinueOnError="True" DisplayName="Kill Process" sap:VirtualizedContainerService.HintSize="1068,57" sap2010:WorkflowViewState.IdRef="KillProcess_1" ProcessName="Isah7.exe">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">False</x:Boolean>
