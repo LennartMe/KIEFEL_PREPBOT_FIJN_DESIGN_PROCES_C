@@ -119,16 +119,16 @@
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="_6_2_Print_voorblad" sap:VirtualizedContainerService.HintSize="836,4848" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="_6_2_Print_voorblad" sap:VirtualizedContainerService.HintSize="836,5062.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:RetryScope ContinueOnError="True" DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="836,4825.333333333333" sap2010:WorkflowViewState.IdRef="RetryScope_2" NumberOfRetries="3">
+    <ui:RetryScope ContinueOnError="True" DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="836,5040" sap2010:WorkflowViewState.IdRef="RetryScope_2" NumberOfRetries="3">
       <ui:RetryScope.ActivityBody>
         <ActivityAction>
-          <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="794,4624" sap2010:WorkflowViewState.IdRef="Sequence_25">
+          <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="794,4838.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_25">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -142,13 +142,18 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:KillProcess>
-            <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: Isah - Hoofdmenu - TestProduktieDB" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="760,4506.666666666667" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" IsDisplayNameAuto="True" ScopeGuid="4b53739b-0c73-40c3-862f-665e05b42f0d" Version="V2">
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="7.2.1 Login into ISAH - Invoke Workflow File (Process\7.2.1 Login into ISAH.xaml)" sap:VirtualizedContainerService.HintSize="760,177.33333333333334" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Process\7.2.1 Login into ISAH.xaml">
+              <ui:InvokeWorkflowFile.Arguments>
+                <OutArgument x:TypeArguments="x:Boolean" x:Key="LoginSuccessful" />
+              </ui:InvokeWorkflowFile.Arguments>
+            </ui:InvokeWorkflowFile>
+            <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: Isah - Hoofdmenu - TestProduktieDB" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="760,4544" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" IsDisplayNameAuto="True" ScopeGuid="4b53739b-0c73-40c3-862f-665e05b42f0d" Version="V2">
               <uix:NApplicationCard.Body>
                 <ActivityAction x:TypeArguments="x:Object">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="726,4212.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="726,4210" sap2010:WorkflowViewState.IdRef="Sequence_2">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
