@@ -831,7 +831,7 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </ui:GetRobotAsset>
-                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Send Email Sequence - Invoke Workflow File (Send Email Sequence.xaml)" sap:VirtualizedContainerService.HintSize="492,177.33333333333334" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Shared\Send Email.xaml">
+                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Send Email Sequence - Invoke Workflow File (Send Email Sequence.xaml)" sap:VirtualizedContainerService.HintSize="492,177.33333333333334" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Shared\Send Email Sequence.xaml">
                       <ui:InvokeWorkflowFile.Arguments>
                         <InArgument x:TypeArguments="x:String" x:Key="CC">[SupportEmail]</InArgument>
                         <InArgument x:TypeArguments="x:String" x:Key="EmailSubject">URGENT - Onbekende fout fijne werkvoorbereiding proces C</InArgument>
