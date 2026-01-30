@@ -113,20 +113,21 @@
       <AssemblyReference>UiPath.Platform</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Send Email Sequence" sap:VirtualizedContainerService.HintSize="784.6666666666666,3378" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Send Email Sequence" sap:VirtualizedContainerService.HintSize="784.6666666666666,5078.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="EmailUsername" />
       <Variable x:TypeArguments="ss:SecureString" Name="EmailPassword" />
       <Variable x:TypeArguments="x:String" Default="Lennart.meeuse@starcode.nl" Name="EmailReceivers" />
       <Variable x:TypeArguments="x:String" Name="HtmlEmail" />
       <Variable x:TypeArguments="x:String" Name="htmlEmailBodyMessage" />
+      <Variable x:TypeArguments="x:String" Name="SupportEmail" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log &quot;Sending email..&quot;" sap:VirtualizedContainerService.HintSize="486,176.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;Sending email..&quot;]">
+    <ui:LogMessage DisplayName="Log &quot;Sending email..&quot;" sap:VirtualizedContainerService.HintSize="528,176.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;Sending email..&quot;]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -134,8 +135,8 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:LogMessage>
-    <ui:LogMessage DisplayName="Log Emailsubject" sap:VirtualizedContainerService.HintSize="486,176.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_5" Message="[&quot;EmailSubject: &quot; + EmailSubject]" />
-    <ui:LogMessage DisplayName="Log EmailMessage" sap:VirtualizedContainerService.HintSize="486,176.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_3" Message="[&quot;Message: &quot; + Message1 + Environment.newline +&#xA;&quot;&quot; + Environment.newline +&#xA;Message2]">
+    <ui:LogMessage DisplayName="Log Emailsubject" sap:VirtualizedContainerService.HintSize="528,176.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_5" Message="[&quot;EmailSubject: &quot; + EmailSubject]" />
+    <ui:LogMessage DisplayName="Log EmailMessage" sap:VirtualizedContainerService.HintSize="528,176.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_3" Message="[&quot;Message: &quot; + Message1 + Environment.newline +&#xA;&quot;&quot; + Environment.newline +&#xA;Message2]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -143,7 +144,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:LogMessage>
-    <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="SMTP EMAIL PW" CacheStrategy="None" DisplayName="Get Credential" FolderPath="Shared" sap:VirtualizedContainerService.HintSize="486,176.66666666666666" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[EmailPassword]" Username="[EmailUsername]">
+    <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="SMTP EMAIL PW" CacheStrategy="None" DisplayName="Get Credential" FolderPath="Shared" sap:VirtualizedContainerService.HintSize="528,176.66666666666666" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[EmailPassword]" Username="[EmailUsername]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -151,7 +152,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:GetRobotCredential>
-    <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="EmailReceivers Fijne werkvoorbereiding" CacheStrategy="None" DisplayName="Get Emailreceivers Asset" FolderPath="Fijne Werkvoorbereiding" sap:VirtualizedContainerService.HintSize="486,176.66666666666666" sap2010:WorkflowViewState.IdRef="GetRobotAsset_1">
+    <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="EmailReceivers Fijne werkvoorbereiding" CacheStrategy="None" DisplayName="Get Emailreceivers Asset" FolderPath="Fijne Werkvoorbereiding" sap:VirtualizedContainerService.HintSize="528,176.66666666666666" sap2010:WorkflowViewState.IdRef="GetRobotAsset_1">
       <ui:GetRobotAsset.Value>
         <OutArgument x:TypeArguments="x:String">[EmailReceivers]</OutArgument>
       </ui:GetRobotAsset.Value>
@@ -162,7 +163,12 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:GetRobotAsset>
-    <Assign DisplayName="Make html body" sap:VirtualizedContainerService.HintSize="486,176.66666666666666" sap2010:WorkflowViewState.IdRef="Assign_5">
+    <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="SupportEmail" CacheStrategy="None" DisplayName="Get SupportEmail Asset" FolderPath="Shared" sap:VirtualizedContainerService.HintSize="528,176.66666666666666" sap2010:WorkflowViewState.IdRef="GetRobotAsset_2">
+      <ui:GetRobotAsset.Value>
+        <OutArgument x:TypeArguments="x:String">[SupportEmail]</OutArgument>
+      </ui:GetRobotAsset.Value>
+    </ui:GetRobotAsset>
+    <Assign DisplayName="Make html body" sap:VirtualizedContainerService.HintSize="528,176.66666666666666" sap2010:WorkflowViewState.IdRef="Assign_5">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">[htmlEmailBodyMessage]</OutArgument>
       </Assign.To>
@@ -177,7 +183,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </Assign>
-    <If Condition="[Message2 &lt;&gt; &quot;&quot;]" DisplayName="Only add message 2 if it is filled in." sap:VirtualizedContainerService.HintSize="486,458" sap2010:WorkflowViewState.IdRef="If_1">
+    <If Condition="[Message2 &lt;&gt; &quot;&quot;]" DisplayName="Only add message 2 if it is filled in." sap:VirtualizedContainerService.HintSize="528,458" sap2010:WorkflowViewState.IdRef="If_1">
       <If.Then>
         <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,227.33333333333334" sap2010:WorkflowViewState.IdRef="Sequence_5">
           <sap:WorkflowViewStateService.ViewState>
@@ -213,7 +219,7 @@
         </Sequence>
       </If.Else>
     </If>
-    <If Condition="[ResultsTable &lt;&gt; &quot;&quot;]" DisplayName="Add resultstable if filled in." sap:VirtualizedContainerService.HintSize="486,458" sap2010:WorkflowViewState.IdRef="If_2">
+    <If Condition="[ResultsTable &lt;&gt; &quot;&quot;]" DisplayName="Add resultstable if filled in." sap:VirtualizedContainerService.HintSize="528,458" sap2010:WorkflowViewState.IdRef="If_2">
       <If.Then>
         <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,227.33333333333334" sap2010:WorkflowViewState.IdRef="Sequence_7">
           <sap:WorkflowViewStateService.ViewState>
@@ -248,7 +254,7 @@ ResultsTable]</InArgument>
         </Sequence>
       </If.Else>
     </If>
-    <Sequence DisplayName="Build html structure email" sap:VirtualizedContainerService.HintSize="486,1030.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_4">
+    <Sequence DisplayName="Build html structure email" sap:VirtualizedContainerService.HintSize="528,1030.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_4">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -330,10 +336,10 @@ ResultsTable]</InArgument>
         </Assign.Value>
       </Assign>
     </Sequence>
-    <If Condition="[ExceptionScreenshot &lt;&gt; &quot;&quot;]" DisplayName="Send email with or without attachment" sap:VirtualizedContainerService.HintSize="486,57.333333333333336" sap2010:WorkflowViewState.IdRef="If_5">
+    <If Condition="[ExceptionScreenshot &lt;&gt; &quot;&quot;]" DisplayName="Send email with or without attachment" sap:VirtualizedContainerService.HintSize="528,1581.3333333333333" sap2010:WorkflowViewState.IdRef="If_5">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
@@ -353,7 +359,7 @@ ResultsTable]</InArgument>
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:SendMail ResourceAttachmentList="{x:Null}" AttachmentInputMode="FilePaths" AttachmentsCollection="{x:Null}" Bcc="[BCC]" Body="[HtmlEmail]" Cc="[CC]" ConnectionMode="LegacyConfiguration" ContinueOnError="{x:Null}" DisplayName="Send SMTP Mail Message" Email="[EmailUsername]" EnableSSL="True" From="{x:Null}" sap:VirtualizedContainerService.HintSize="416,426" sap2010:WorkflowViewState.IdRef="SendMail_2" IgnoreCRL="False" IsBodyHtml="True" MailMessage="{x:Null}" Name="{x:Null}" Password="{x:Null}" Port="587" ReplyTo="Lennart.meeuse@starcode.nl" ResourceAttachments="{x:Null}" Result="{x:Null}" SecureConnection="Auto" SecurePassword="[EmailPassword]" Server="smtp.office365.com" Subject="[EmailSubject]" TimeoutMS="{x:Null}" To="[EmailReceivers]" UseISConnection="False" UseOAuth="{x:Null}">
+                  <ui:SendMail ContinueOnError="{x:Null}" From="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" Password="{x:Null}" ResourceAttachmentList="{x:Null}" ResourceAttachments="{x:Null}" Result="{x:Null}" TimeoutMS="{x:Null}" UseOAuth="{x:Null}" AttachmentInputMode="FilePaths" Bcc="[BCC]" Body="[HtmlEmail]" Cc="[CC]" ConnectionMode="LegacyConfiguration" DisplayName="Send SMTP Mail Message" Email="[EmailUsername]" EnableSSL="True" sap:VirtualizedContainerService.HintSize="416,426" sap2010:WorkflowViewState.IdRef="SendMail_2" IgnoreCRL="False" IsBodyHtml="True" Port="587" ReplyTo="[SupportEmail]" SecureConnection="Auto" SecurePassword="[EmailPassword]" Server="smtp.office365.com" Subject="[EmailSubject]" To="[EmailReceivers]" UseISConnection="False">
                     <ui:SendMail.AttachmentsBackup>
                       <usau:BackupSlot x:TypeArguments="umame:AttachmentInputMode" StoredValue="FilePaths">
                         <usau:BackupSlot.BackupValues>
@@ -399,7 +405,7 @@ ResultsTable]</InArgument>
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:SendMail ResourceAttachmentList="{x:Null}" AttachmentInputMode="Existing" AttachmentsCollection="{x:Null}" Bcc="[BCC]" Body="[HtmlEmail]" Cc="[CC]" ConnectionMode="LegacyConfiguration" ContinueOnError="{x:Null}" DisplayName="Send SMTP Mail Message" Email="[EmailUsername]" EnableSSL="True" From="{x:Null}" sap:VirtualizedContainerService.HintSize="416,372.6666666666667" sap2010:WorkflowViewState.IdRef="SendMail_3" IgnoreCRL="False" IsBodyHtml="True" MailMessage="{x:Null}" Name="{x:Null}" Password="{x:Null}" Port="587" ReplyTo="Lennart.meeuse@starcode.nl" ResourceAttachments="{x:Null}" Result="{x:Null}" SecureConnection="Auto" SecurePassword="[EmailPassword]" Server="smtp.office365.com" Subject="[EmailSubject]" TimeoutMS="{x:Null}" To="[EmailReceivers]" UseISConnection="False" UseOAuth="{x:Null}">
+                  <ui:SendMail ContinueOnError="{x:Null}" From="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" Password="{x:Null}" ResourceAttachmentList="{x:Null}" ResourceAttachments="{x:Null}" Result="{x:Null}" TimeoutMS="{x:Null}" UseOAuth="{x:Null}" AttachmentInputMode="Existing" Bcc="[BCC]" Body="[HtmlEmail]" Cc="[CC]" ConnectionMode="LegacyConfiguration" DisplayName="Send SMTP Mail Message" Email="[EmailUsername]" EnableSSL="True" sap:VirtualizedContainerService.HintSize="416,372.6666666666667" sap2010:WorkflowViewState.IdRef="SendMail_3" IgnoreCRL="False" IsBodyHtml="True" Port="587" ReplyTo="[SupportEmail]" SecureConnection="Auto" SecurePassword="[EmailPassword]" Server="smtp.office365.com" Subject="[EmailSubject]" To="[EmailReceivers]" UseISConnection="False">
                     <ui:SendMail.AttachmentsBackup>
                       <usau:BackupSlot x:TypeArguments="umame:AttachmentInputMode" StoredValue="Existing">
                         <usau:BackupSlot.BackupValues>
@@ -428,7 +434,7 @@ ResultsTable]</InArgument>
         </Sequence>
       </If.Else>
     </If>
-    <Delay DisplayName="Wait 2 seconds to fix email order when sending emails fast after each other" Duration="00:00:02" sap:VirtualizedContainerService.HintSize="486,124" sap2010:WorkflowViewState.IdRef="Delay_1" />
-    <ui:LogMessage DisplayName="Log &quot;Email succesfully sent.&quot;" sap:VirtualizedContainerService.HintSize="486,167.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[&quot;Email succesfully sent.&quot;]" />
+    <Delay DisplayName="Wait 2 seconds to fix email order when sending emails fast after each other" Duration="00:00:02" sap:VirtualizedContainerService.HintSize="528,124" sap2010:WorkflowViewState.IdRef="Delay_1" />
+    <ui:LogMessage DisplayName="Log &quot;Email succesfully sent.&quot;" sap:VirtualizedContainerService.HintSize="528,167.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[&quot;Email succesfully sent.&quot;]" />
   </Sequence>
 </Activity>
