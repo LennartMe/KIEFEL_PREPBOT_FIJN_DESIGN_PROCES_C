@@ -610,7 +610,7 @@
                                                 </scg:Dictionary>
                                               </sap:WorkflowViewStateService.ViewState>
                                               <ui:LogMessage DisplayName="Log LastWriteTime" sap:VirtualizedContainerService.HintSize="452,179.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[currentfile.FullName + &quot; LastWriteTime: &quot; + CurrentFile.LastWriteTime.ToString(&quot;yyyy-MM-dd HH:mm:ss&quot;)]" />
-                                              <If Condition="[CurrentFile.LastWriteTime &gt; DateTime.Now.AddSeconds(-25)]" DisplayName="Check if file is newer than 25 seconds" sap:VirtualizedContainerService.HintSize="452,807.3333333333334" sap2010:WorkflowViewState.IdRef="If_5">
+                                              <If Condition="[CurrentFile.LastWriteTime &gt; DateTime.Now.AddSeconds(-15)]" DisplayName="Check if file is newer than 15 seconds" sap:VirtualizedContainerService.HintSize="452,807.3333333333334" sap2010:WorkflowViewState.IdRef="If_5">
                                                 <sap:WorkflowViewStateService.ViewState>
                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
