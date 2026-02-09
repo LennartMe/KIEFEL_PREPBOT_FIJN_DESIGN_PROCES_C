@@ -639,7 +639,7 @@
                                     </Sequence>
                                   </ui:InterruptibleDoWhile.Body>
                                   <ui:InterruptibleDoWhile.Condition>
-                                    <VisualBasicValue x:TypeArguments="x:Boolean" DisplayName="Visual basic value" ExpressionText="FolderExists = False OrElse Now &gt; TimeClickedOK.AddSeconds(10)" />
+                                    <VisualBasicValue x:TypeArguments="x:Boolean" DisplayName="Visual basic value" ExpressionText="FolderExists = False OrElse Now &lt; TimeClickedOK.AddSeconds(10)" />
                                   </ui:InterruptibleDoWhile.Condition>
                                 </ui:InterruptibleDoWhile>
                                 <Assign DisplayName="Assign StartCheckForFileTime" sap:VirtualizedContainerService.HintSize="488,176.66666666666666" sap2010:WorkflowViewState.IdRef="Assign_6">
@@ -650,7 +650,7 @@
                                     <InArgument x:TypeArguments="s:DateTime">[DateTime.Now]</InArgument>
                                   </Assign.Value>
                                 </Assign>
-                                <ui:InterruptibleWhile CurrentIndex="{x:Null}" DisplayName="Check for file during 10 seconds if FolderExists." sap:VirtualizedContainerService.HintSize="488,240" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
+                                <ui:InterruptibleWhile CurrentIndex="{x:Null}" Condition="[(FileExists = False OrElse Now &gt; TimeStartedCheckingForFile.AddSeconds(10)) and FolderExists = True]" DisplayName="Check for file during 10 seconds if FolderExists." sap:VirtualizedContainerService.HintSize="488,240" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
                                   <ui:InterruptibleWhile.Body>
                                     <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="450,108" sap2010:WorkflowViewState.IdRef="Sequence_32">
                                       <sap:WorkflowViewStateService.ViewState>
@@ -721,9 +721,6 @@
                                       </ui:ForEachFileX>
                                     </Sequence>
                                   </ui:InterruptibleWhile.Body>
-                                  <ui:InterruptibleWhile.Condition>
-                                    <VisualBasicValue x:TypeArguments="x:Boolean" DisplayName="Visual basic value" ExpressionText="(FileExists = False OrElse Now &gt; TimeStartedCheckingForFile.AddSeconds(10)) and FolderExists = True" />
-                                  </ui:InterruptibleWhile.Condition>
                                 </ui:InterruptibleWhile>
                                 <If Condition="[FileExists = False]" DisplayName="FileExists = False" sap:VirtualizedContainerService.HintSize="488,717.3333333333334" sap2010:WorkflowViewState.IdRef="If_4">
                                   <sap:WorkflowViewStateService.ViewState>
